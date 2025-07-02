@@ -18,6 +18,10 @@
     src: url('../assets/font/Poppins-Regular.ttf');
 }
 
+* ::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Opera */
+}
+
 .font-bold {
     font-family: 'Poppins-Bold';
 }
@@ -42,6 +46,19 @@
     color: #4E0089;
 }
 
+.text-third {
+    color: #7900D4;
+}
+
+.text-fourth {
+    color: #631B99;
+}
+
+
+.bg-purple {
+    background-color: #5A009D;
+}
+
 .text-black {
     color: #222222;
 }
@@ -56,6 +73,10 @@
 
 .text-gray {
     color: #6B6B6B;
+}
+
+.text-gray-secondary {
+    color: #5F5F5F;
 }
 
 .text-lightGray {
