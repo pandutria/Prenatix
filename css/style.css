@@ -18,6 +18,10 @@
     src: url('../assets/font/Poppins-Regular.ttf');
 }
 
+* {
+    
+}
+
 * ::-webkit-scrollbar {
   display: none;                 /* Chrome, Safari, Opera */
 }
