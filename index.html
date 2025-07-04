@@ -30,9 +30,6 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- Container Start -->
-  <div class="flex flex-col scroll-smooth w-full overflow-hidden">
-
     <!-- Home Start -->
     <section class="flex flex-row justify-between w-full h-screen items-center lg:pt-8 pt-30 px-24">
       <div class="flex flex-col lg:gap-4 gap-4 lg:w-auto w-full lg:items-start items-start lg:px-0 px-5">
@@ -189,7 +186,7 @@
     <!-- Why Prenatix End -->
 
     <!-- Testimony Start -->
-    <section class="flex flex-col lg:py-20 py-10 h-auto justify-between items-center w-full lg:px-24 px-5">
+    <section class="flex flex-col lg:py-20 py-10 gap-16 h-auto justify-center items-start w-full lg:px-24 px-5">
       <div class="flex lg:flex-row flex-col items-center justify-between w-full lg:gap-0 gap-4">
         <div class="">
           <h1 class="font-bold lg:text-[38px] text-[30px] lg:w-100 w-full">Lihat Apa Kata Para</h1>
@@ -197,9 +194,15 @@
         </div>
         <p class="font-regular text-gray lg:text-[14px] text-[12px] lg:w-[500px] w-full">Kami senang melihat para ibu hamil merasa terbantu selama menggunakan Prenatix. Berikut ini adalah beberapa pengalaman mereka yang membagikan manfaat yang mereka rasakan selama kehamilan.</p>
       </div>
+      <div class="w-full">
+        <div class="overflow-x-scroll" id="scrollWrapper1">
+          <div class="flex justify-start w-max items-start gap-20" id="testimoniId1">
+            <!-- Mapping on Javascript -->
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Testimony End -->
-
     
     <!-- Game Start -->
     <section class="flex flex-col justify-center h-[80vh] items-center w-full lg:px-24 px-5">
@@ -287,7 +290,8 @@
     </footer>
     <!-- Footer End -->
 
-  </div>
-  <!-- Container End -->
+  <!-- Javascript -->
+   <script type="module" src="./js/data/testimoni.js"></script>
+   <script type="module" src="./js/main.js"></script>
 </body>
 </html>

@@ -85,6 +85,13 @@
     background-color: #5A009D;
 }
 
+
+/* Border Assets */
+.border-primary {
+    outline: none;
+    border: 2px solid #A52DFF;
+}
+
 /* Display Hidden Responsive */
 .display-hidden {
     display: block;

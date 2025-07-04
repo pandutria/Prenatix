@@ -1,13 +1,13 @@
-import img1 from '../../assets/image/pic/testimoni/img1.png';
-import img2 from '../../assets/image/pic/testimoni/img2.png';
-import img3 from '../../assets/image/pic/testimoni/img3.png';
-import img4 from '../../assets/image/pic/testimoni/img4.png';
-import img5 from '../../assets/image/pic/testimoni/img5.png';
-import img6 from '../../assets/image/pic/testimoni/img6.png';
-import img7 from '../../assets/image/pic/testimoni/img7.png';
-import img8 from '../../assets/image/pic/testimoni/img8.png';
-import img9 from '../../assets/image/pic/testimoni/img9.png';
-import img10 from '../../assets/image/pic/testimoni/img10.png';
+const img1 = '../../assets/image/pic/testimoni/img1.png';
+const img2 = '../../assets/image/pic/testimoni/img2.png';
+const img3 = '../../assets/image/pic/testimoni/img3.png';
+const img4 = '../../assets/image/pic/testimoni/img4.png';
+const img5 = '../../assets/image/pic/testimoni/img5.png';
+const img6 = '../../assets/image/pic/testimoni/img6.png';
+const img7 = '../../assets/image/pic/testimoni/img7.png';
+const img8 = '../../assets/image/pic/testimoni/img8.png';
+const img9 = '../../assets/image/pic/testimoni/img9.png';
+const img10 = '../../assets/image/pic/testimoni/img10.png';
 
 export const testimoniData1 = [
     {
