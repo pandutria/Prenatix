@@ -13,6 +13,22 @@ listBtn.addEventListener('click', () => {
 });
 // Navbar End
 
+// Animation Detect Start
+const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  rootMargin: "0px 0px -100px 0px"
+});
+
+elements.forEach(el => observer.observe(el));
+// Animation Detect End
+
 // Testimoni Start
 import { testimoniData1, testimoniData2 } from "./data/testimoni.js";
 const stars = '../assets/image/pic/testimoni/stars.png';
