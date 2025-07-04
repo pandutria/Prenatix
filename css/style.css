@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Poppins-Bold';
     src: url('../assets/font/Poppins-Bold.ttf');
@@ -85,7 +89,6 @@
     background-color: #5A009D;
 }
 
-
 /* Border Assets */
 .border-primary {
     outline: none;
@@ -101,9 +104,54 @@
     display: flex;
 }
 
+.display-flex {
+    display: none;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
+    /* Display Hidden Responsive */
     .display-hidden,
     .display-hidden-flex {
         display: none;
     }
+
+    .display-flex {
+        display: flex;
+    }
+
+    /* Navbar Active Start */
+    .navbar-active {
+        right: -300%;
+        transition: all ease-in-out 0.6s;
+    }
+
+    .navbar-active.active {
+        right: 0;
+        transition: all ease-in-out 0.6s;
+    }
+
+    .navbar-btn-active-top,
+    .navbar-btn-active-center,
+    .navbar-btn-active-bottom {
+        rotate: 0deg;
+        transition: all ease-in-out 0.7s;
+    }  
+    
+    .navbar-btn-active-top.active {
+        transition: all ease-in-out 0.7s;
+        rotate: 45deg;
+        transform: translateY(630%);
+    }
+
+    .navbar-btn-active-center.active {
+        transition: all ease-in-out 0.7s;
+        opacity: 0;
+    }
+
+    .navbar-btn-active-bottom.active {
+        rotate: -45deg;
+        transition: all ease-in-out 0.7s;
+        transform: translateY(-630%);
+    }
+    /* Navbar Active End */
 }

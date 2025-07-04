@@ -1,3 +1,18 @@
+// Navbar Start
+const listBtn = document.getElementById('listBtn');
+const listBtnTop = document.getElementById('listBtnTop');
+const listBtnCenter = document.getElementById('listBtnCenter');
+const listBtnBottom = document.getElementById('listBtnBottom');
+const navbarMenu = document.querySelector('.navbar-active');
+
+listBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+    listBtnTop.classList.toggle('active');
+    listBtnCenter.classList.toggle('active');
+    listBtnBottom.classList.toggle('active');
+});
+// Navbar End
+
 // Testimoni Start
 import { testimoniData1, testimoniData2 } from "./data/testimoni.js";
 const stars = '../assets/image/pic/testimoni/stars.png';

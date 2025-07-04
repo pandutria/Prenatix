@@ -10,35 +10,39 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
   <!-- Navbar Start -->
   <nav class="fixed w-full flex flex-row items-center justify-between h-[12vh] lg:px-24 px-5 border-[1px] border-[#00000029] bg-white z-50">
     <div class="flex flex-row items-center gap-3">
       <img src="./assets/image/logo/logo.svg" class="w-[23px] h-auto object-contain" alt="">
       <p class="text-primary font-semibold text-[22px]">Prenatix</p>
     </div>
-    <div class="flex items-center justify-center gap-8">
-      <a href="" class="font-semibold text-primary lg:text-[16px] text-[14px]">Beranda</a>
-      <a href="" class="font-regular text-black lg:text-[16px] text-[14px]">Tentang Kami</a>
-      <a href="" class="font-regular text-black lg:text-[16px] text-[14px]">Layanan Kami</a>
-      <a href="" class="font-regular text-black lg:text-[16px] text-[14px]">Testimoni</a>
-      <button class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-1.5 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]">
+    <div class="flex items-center justify-center gap-8 lg:relative fixed bg-white lg:flex-row flex-col navbar-active lg:h-auto h-screen lg:w-auto w-[240px] top-0">
+      <a href="#" class="font-semibold text-primary text-[16px]">Beranda</a>
+      <a href="" class="font-regular text-black text-[16px]">Tentang Kami</a>
+      <a href="" class="font-regular text-black text-[16px]">Layanan Kami</a>
+      <a href="" class="font-regular text-black text-[16px]">Testimoni</a>
+      <button class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-3 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]">
         <img src="./assets/image/icon/call.png" class="lg:w-[16px] w-[14px] h-auto object-contain"  alt="">
         <p class="font-semibold text-white lg:text-[16px] text-[14px]">Hubungi Kami</p>
       </button>
+    </div>
+    <div class="display-flex flex-col h-[20px] relative z-50 justify-between items-center" id="listBtn">
+      <div class="bg-black h-[2px] w-[24px] navbar-btn-active-top" id="listBtnTop"></div>
+      <div class="bg-black h-[2px] w-[24px] navbar-btn-active-center" id="listBtnCenter"></div>
+      <div class="bg-black h-[2px] w-[24px] navbar-btn-active-bottom" id="listBtnBottom"></div>
     </div>
   </nav>
   <!-- Navbar End -->
 
     <!-- Home Start -->
-    <section class="flex flex-row justify-between w-full h-screen items-center lg:pt-8 pt-30 px-24">
-      <div class="flex flex-col lg:gap-4 gap-4 lg:w-auto w-full lg:items-start items-start lg:px-0 px-5">
+    <section class="flex flex-row justify-between w-full h-screen h-[90vh] items-center lg:pt-8 pt-14 lg:px-24 px-5">
+      <div class="flex flex-col lg:gap-4 gap-4 lg:w-auto w-full lg:items-start items-start">
         <h1 class="font-semibold lg:text-[38px] text-[25px] text-black lg:w-[560px] w-full lg:text-start text-start">Sayangi <span class="text-primary">Kandunganmu,</span> Siapkan Masa Depan <span class="text-primary">Si Kecil</span> dengan Ilmu & Kasih!</h1>
         <p class="font-regular text-gray lg:text-[16px] text-[14px] lg:w-140 w-full lg:text-start text-start">Temukan berbagai informasi penting seputar kehamilan untuk mendampingi setiap langkahmu menjadi ibu yang siap, percaya diri, dan bahagia hingga menyambut si kecil.</p>
         <img src="./assets/image/icon/line_home.png" class="w-37" alt="">
-        <div class="flex lg:flex-row flex-col mt-2">
+        <div class="flex lg:flex-row flex-col mt-2 gap-6">
           <a href="" class="font-semibold text-white lg:text-[17px] text-[14px] bg-gradient-to-r from-[#AD40FF] to-[#4E0089] rounded-[50px] px-6 py-3.5">Mulai Sekarang</a>
-          <img src="./assets/image/pic/people.png" class="lg:flex w-40 h-auto object-contain ml-6" alt="">
+          <img src="./assets/image/pic/people.png" class="lg:flex w-40 h-auto object-contain" alt="">
         </div>
       </div>
       <div class="flex display-hidden w-[440px] h-[400px] flex-col items-center justify-center relative mt-4">
@@ -62,10 +66,10 @@
     <!-- Home End -->
 
     <!-- About Me Start -->
-    <div class="flex lg:flex-row flex-col w-full h-screen items-center justify-between lg:pb-20 gap-7 lg:px-24 -mt-10 px-5">
+    <div class="flex lg:flex-row flex-col w-full lg:h-screen h-auto items-center justify-between pb-20 gap-7 lg:px-24 -mt-10 px-5">
       <div class="flex flex-row lg:gap-7 gap-5">
-        <img src="./assets/image/pic/about1.png" class="lg:w-64 w-40 h-auto object-contain mt-20" alt="">
-        <img src="./assets/image/pic/about2.png" class="lg:w-64 w-40 h-auto object-contain" alt="">
+        <img src="./assets/image/pic/about1.png" class="lg:w-64 w-36 h-auto object-contain mt-20" alt="">
+        <img src="./assets/image/pic/about2.png" class="lg:w-64 w-36 h-auto object-contain" alt="">
       </div>
       <div class="flex flex-col gap-4 lg:mt-12 mt-0 lg:w-[580px] w-full">
         <h1 class="font-semibold text-white lg:text-[15px] text-[13px] rounded-[50px] px-6 py-2 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] w-fit">Tentang Kami</h1>
@@ -92,7 +96,7 @@
     <!-- About Me End -->
 
     <!-- Our Service Start -->
-    <section class="flex flex-col items-start justify-center gap-8 bg-purple w-full h-screen py-10 w-full lg:px-24 px-5">
+    <section class="flex flex-col items-start justify-center gap-8 bg-purple w-full h-auto py-10 w-full lg:px-24 px-5">
       <div class="flex flex-row justify-start lg:w-[600px] w-full">
         <div class="flex flex-col gap-4">
             <h1 class="font-semibold text-white text-[14px] rounded-[50px] px-5.5 py-2 bg-gradient-to-r from-[#A52DFF] to-[#7900D4] w-fit">Layanan Kami</h1>
@@ -101,22 +105,22 @@
         </div>
       </div>
       <div class="flex lg:flex-row flex-col justify-center items-center mt-10 gap-8 pb-10">
-        <div class="flex flex-col bg-[#FFFFFF] rounded-[5px] gap-1 py-5 px-5">
+        <div class="flex flex-col bg-[#FFFFFF] rounded-[5px] gap-1 p-5">
           <img src="./assets/image/icon/robot_service.png" class="w-11.5 h-auto object-contain" alt="">
           <p class="font-semibold text-fourth text-[23px] mt-2">Konsultasi AI Pintar</p>
-          <p class="font-medium text-gray-secondary text-[15px] w-72 mr-7">Dapatkan jawaban cepat dan akurat seputar kehamilan melalui fitur tanya jawab otomatis.</p>
+          <p class="font-medium text-gray-secondary text-[15px] lg:w-72 w-full mr-7">Dapatkan jawaban cepat dan akurat seputar kehamilan melalui fitur tanya jawab otomatis.</p>
           <img src="./assets/image/icon/next.png" class="w-5.5 h-auto object-contain self-end" alt="">
         </div>
         <div class="flex flex-col bg-[#FFFFFF] rounded-[5px] gap-1 py-5 px-5">
           <img src="./assets/image/icon/consultation_service.png" class="w-11.5 h-auto p-1 object-contain" alt="">
           <p class="font-semibold text-fourth text-[23px] mt-2">Diagnosa Otomatis</p>
-          <p class="font-medium text-gray-secondary text-[15px] w-72 mr-7">Kenali gejala awal kehamilan dan dapatkan saran awal secara instan dengan teknologi pintar.</p>
+          <p class="font-medium text-gray-secondary text-[15px] lg:w-72 w-full mr-7">Kenali gejala awal kehamilan dan dapatkan saran awal secara instan dengan teknologi pintar.</p>
           <img src="./assets/image/icon/next.png" class="w-5.5 h-auto object-contain self-end" alt="">
         </div>
         <div class="flex flex-col bg-[#FFFFFF] rounded-[5px] gap-1 py-5 px-5">
           <img src="./assets/image/icon/game_service.png" class="w-11.5 h-auto object-contain p-1" alt="">
           <p class="font-semibold text-fourth text-[23px] mt-2">Game Edukasi Kehamilan</p>
-          <p class="font-medium text-gray-secondary text-[15px] w-72 mr-7">Belajar sambil bermain! Uji pengetahuanmu tentang kehamilan lewat game interaktif yang seru.</p>
+          <p class="font-medium text-gray-secondary text-[15px] lg:w-72 w-full mr-7">Belajar sambil bermain! Uji pengetahuanmu tentang kehamilan lewat game interaktif yang seru.</p>
           <img src="./assets/image/icon/next.png" class="w-5.5 h-auto object-contain self-end" alt="">
         </div>
       </div>
@@ -124,15 +128,15 @@
     <!-- Our Service End -->
 
     <!-- Suggestion Start -->
-    <section class="flex lg:flex-row h-screen flex-col justify-between lg:py-20 py-10 items-center gap-5 w-full lg:px-24 px-5">
+    <section class="flex lg:flex-row h-auto flex-col justify-between lg:py-20 py-10 items-center gap-5 w-full lg:px-24 px-5">
       <div class="flex relative lg:w-auto w-full h-auto items-center">
-        <img src="./assets/image/pic/safe_health1.png" class="lg:w-110 w-full h-110 object-contain" alt="">
-        <div class="absolute flex flex-col lg:w-112 w-full lg:ml-[-10px] h-auto lg:gap-72 gap-60 justify-between lg:mt-5 mt-8">
-          <img src="./assets/image/pic/safe_health2.png" class="lg:w-27 lg:mt-0 mt-[-15px] w-22 ml-auto h-auto object-contain top-0 right-0" alt="">
-          <img src="./assets/image/pic/safe_health3.png" class="lg:w-27 lg:ml-0 ml-[-8px] lg:mt-0 mt-[-10px] w-22 h-auto object-contain bottom-0 left-0" alt="">
+        <img src="./assets/image/pic/safe_health1.png" class="lg:w-120 w-full h-auto object-contain" alt="">
+        <div class="absolute flex flex-col w-full h-full justify-between">
+          <img src="./assets/image/pic/safe_health2.png" class="lg:w-26 lg:-mt-6 -mt-4 w-18 ml-auto h-auto object-contain top-0 right-0" alt="">
+          <img src="./assets/image/pic/safe_health3.png" class="lg:w-26 lg:-mb-12 -mb-8 w-18 h-auto object-contain bottom-0 left-0" alt="">
         </div>
       </div>
-      <div class="flex flex-col gap-3 lg:w-[600px] w-full">
+      <div class="flex flex-col gap-3 lg:w-[600px] w-full lg:mt-0 mt-8">
         <h1 class="font-bold lg:text-[40px] text-[25px] w-full">Jaga Kesehatan, Jalani <span class="text-primary">Kehamilan</span> dengan Tenang</h1>
         <p class="font-medium text-gray lg:text-[16px] text-[13px] w-full">Prenatix hadir untuk mendukung setiap ibu hamil dalam menjalani masa kehamilan yang sehat dan penuh makna. Dengan fitur pintar, informasi terpercaya, dan pendekatan penuh kasih, kamu tidak sendirian dalam setiap langkah.</p>
         <div class="flex flex-col gap-3 lg:mt-3 mt-1">
@@ -155,11 +159,11 @@
     <!-- Suggestion End -->
 
     <!-- Why Prenatix Start -->
-    <section class="flex lg:flex-row flex-col lg:py-20 py-10 w-full h-auto lg:px-24 px-5 justify-between items-start">
-      <div class="flex flex-col gap-4">
+    <section class="flex lg:flex-row flex-col-reverse lg:py-20 py-10 w-full h-auto lg:px-24 px-5 justify-between items-start">
+      <div class="flex flex-col gap-4 lg:mt-0 -mt-6">
         <h1 class="font-semibold text-white text-[14px] rounded-[50px] px-6 py-2 bg-gradient-to-r from-[#A52DFF] to-[#7900D4] w-fit">Kenapa Memilih Prenatix?</h1>
-        <h1 class="font-semibold lg:text-[30px] text-[25px] lg:w-150 w-full">Bersama <span class="text-primary">Prenatix</span>, Jalani Kehamilan dengan Tenang & Penuh Kasih</h1>
-        <div class="flex flex-row items-center lg:mt-4 mt-1">
+        <h1 class="font-semibold lg:text-[30px] text-[20px] lg:w-150 w-full">Bersama <span class="text-primary">Prenatix</span>, Jalani Kehamilan dengan Tenang & Penuh Kasih</h1>
+        <div class="flex flex-row items-center lg:mt-4 mt-3">
           <img src="./assets/image/pic/circle_wallet.png" class="lg:w-16 w-14 h-auto object-contain rounded-[50px] shadow-[0px_2px_10px_0px_rgba(0,0,0,0.25)]" alt="">
           <div class="flex flex-col lg:ml-6 ml-4">
             <h1 class="font-semibold text-fourth lg:text-[25px] text-[18px]">Gratis & Terjangkau</h1>
@@ -216,11 +220,11 @@
     <!-- Testimony End -->
     
     <!-- Game Start -->
-    <section class="flex flex-col justify-center h-[80vh] items-center w-full lg:px-24 px-5">
-      <div class="flex flex-col lg:gap-5 gap-4 bg-gradient-to-br from-[#A52DFF] to-[#631B99] lg:rounded-[40px] rounded-[30px] w-full lg:py-20 py-10 items-center">
-        <h1 class="font-bold text-white lg:text-[40px] w-[25px] leading-[130%] lg:w-160 w-full text-center">Edukasi Kehamilan Premium, Gratis untuk Semua Ibu!</h1>
+    <section class="flex flex-col justify-center lg:h-[80vh] h-auto lg:py-0 py-14 items-center w-full lg:px-24 px-5">
+      <div class="flex flex-col lg:gap-5 gap-4 bg-gradient-to-br from-[#A52DFF] to-[#631B99] lg:rounded-[40px] rounded-[30px] w-full lg:py-20 py-10 lg:px-0 px-8 items-center">
+        <h1 class="font-bold text-white lg:text-[40px] text-[24px] leading-[130%] lg:w-160 w-full text-center">Edukasi Kehamilan Premium, Gratis untuk Semua Ibu!</h1>
         <p class="font-medium text-white text-center leading-[150%] lg:text-[14px] text-[12px] lg:w-150 w-full">Setiap ibu berhak mendapat edukasi kehamilan terbaik. Prenatix hadir dengan fitur pintar dan informasi lengkap yang bisa diakses gratis, kapan saja.</p>
-        <div class="flex flex-row gap-5 mt-5">
+        <div class="flex lg:flex-row flex-col gap-5 mt-5">
           <button class="font-semibold cursor-pointer bg-[#C738FF] text-white lg:leading-[100%] lg:text-[16px] text-[14px] rounded-[12px] px-7 py-4.5 tracking-widest">View Services</button>
           <button class="font-semibold cursor-pointer bg-transparant text-white lg:leading-[100%] lg:text-[16px] text-[14px] rounded-[12px] px-5 py-4.5 tracking-widest border border-white">Join Community</button>
         </div>
@@ -244,7 +248,7 @@
             <img src="./assets/image/icon/facebook.png" class="w-6" alt="">
            </div>
         </div>
-        <div class="lg:flex flex-col gap-3.5 mt-10">
+        <div class="lg:flex flex-col display-hidden-flex gap-3.5 mt-10">
           <h1 class="font-semibold text-[20px] text-black">Company</h1>
           <div class="flex flex-col gap-4 mt-1">
             <p class="font-regular text-gray-secondary text-[14px]">Beranda</p>
@@ -283,8 +287,8 @@
         <div class="flex flex-col gap-4">
           <h2 class="font-medium text-[19px]">Get the app</h2>
           <div class="flex flex-row lg:gap-5 gap-3">
-            <img src="./assets/image/pic/app_store.png" class="lg:w-50 w-43 h-auto object-contain" alt="">
-            <img src="./assets/image/pic/play_store.png" class="lg:w-50 w-42 h-auto object-contain" alt="">
+            <img src="./assets/image/pic/app_store.png" class="lg:w-50 w-36 h-auto object-contain" alt="">
+            <img src="./assets/image/pic/play_store.png" class="lg:w-50 w-36 h-auto object-contain" alt="">
           </div>
         </div>
         <div class="lg:flex display-hidden-flex flex-row gap-8">
