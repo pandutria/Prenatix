@@ -18,14 +18,11 @@
     src: url('../assets/font/Poppins-Regular.ttf');
 }
 
-* {
-    
-}
-
 * ::-webkit-scrollbar {
-  display: none;                 /* Chrome, Safari, Opera */
+  display: none;
 }
 
+/* Font Family */
 .font-bold {
     font-family: 'Poppins-Bold';
 }
@@ -42,6 +39,7 @@
     font-family: 'Poppins-Regular';
 }
 
+/* Text Color Assets */
 .text-primary {
     color: #A52DFF;
 }
@@ -56,11 +54,6 @@
 
 .text-fourth {
     color: #631B99;
-}
-
-
-.bg-purple {
-    background-color: #5A009D;
 }
 
 .text-black {
@@ -85,4 +78,25 @@
 
 .text-lightGray {
     color: #838383;
+}
+
+/* Background Assets */
+.bg-purple {
+    background-color: #5A009D;
+}
+
+/* Display Hidden Responsive */
+.display-hidden {
+    display: block;
+}
+
+.display-hidden-flex {
+    display: flex;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .display-hidden,
+    .display-hidden-flex {
+        display: none;
+    }
 }
