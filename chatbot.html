@@ -20,23 +20,23 @@
     <!-- Navbar End -->
 
     <!-- Chatbot Start -->
-     <section class="w-full h-screen flex flex-col justify-start items-center relative">
+     <section class="w-full h-screen flex flex-col justify-start items-center relative fade-up">
         <div class="flex flex-col justify-center items-center gap-6 pt-12" id="pageWelcome">
-            <img src="./assets/image/logo/logo_chatbot.svg" alt="" class="w-[80px] h-auto">
+            <img src="./assets/image/logo/logo_chatbot.svg" alt="" class="w-[80px] h-auto animate-up-down">
             <div class="flex flex-col gap-1 justify-center items-center">
                 <p class="font-semibold text-[#6B6B6B] text-[20px]">Selamat Datang di <span class="text-primary">Prenatix</span> 👋</p>
                 <h1 class="text-[28px] font-semibold text-black">Apa yang ingin Ibu ketahui hari ini?</h1>
             </div>
             <div class="flex justify-center items-center mt-4 gap-12">
-                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white" id="ask1Btn">
+                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white hover:-translate-y-2 duration-200" id="ask1Btn">
                     <img src="./assets/image/icon/chatbot_icon1.png" alt="" class="w-[45px] h-auto">
                     <p class="font-medium text-[14px] text-[#333333]">Buatkan panduan makanan sehat untuk trimester pertama</p>
                 </div>
-                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white" id="ask2Btn">
+                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white hover:-translate-y-2 duration-200" id="ask2Btn">
                     <img src="./assets/image/icon/chatbot_icon2.png" alt="" class="w-[45px] h-auto">
                     <p class="font-medium text-[14px] text-[#333333]">Tentukan jadwal kontrol sesuai usia kandungan bunda</p>
                 </div>
-                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white" id="ask3Btn">
+                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white hover:-translate-y-2 duration-200" id="ask3Btn">
                     <img src="./assets/image/icon/chatbot_icon3.png" alt="" class="w-[45px] h-auto">
                     <p class="font-medium text-[14px] text-[#333333]">Berikan tips agar tidur menjadi nyenyak saat hamil besar</p>
                 </div>
@@ -49,12 +49,21 @@
                 </div>
             </div>
         </div>
+        <div class="absolute bg-[#00000029] w-full h-screen z-[50] flex flex-col justify-center items-center" id="speakPage">
+            <div class="bg-white rounded-lg w-[400px] h-auto px-6 py-10 flex flex-col justify-center items-center gap-5">
+                <img src="./assets/image/logo/logo_chatbot.svg" alt="" class="w-[100px] h-auto animate-up-down">
+                <p class="text-[20px] font-medium">Prenatix Mendengarkan...</p>
+            </div>
+        </div>
         <div class="absolute bottom-16 w-[70vw] rounded-xl flex justify-between items-center gap-8">
             <div class="bg-white w-full flex justify-start items-center h-[70px] rounded-xl gap-6 shadow-lg px-8">
                 <input type="text" class="w-full font-medium text-[16px] border-0 outline-0" placeholder="Tulis pertanyaan disini..." id="inputChatbot">
-                <img src="./assets/image/icon/send.png" alt="" class="w-[26px] relative z-50 h-auto" id="sendBtn">
+                <img src="./assets/image/icon/send.png" alt="" class="w-[30px] hover:-rotate-[20deg] duration-200 relative h-auto" id="sendBtn">
             </div>
-            <img src="./assets/image/icon/voice.png" alt="" class="w-[70px] cursor-pointer h-auto">
+            <audio id="voiceEffect">
+                <source src="./assets/audio/voice_effect.mp3" type="audio/mp3">
+            </audio>
+            <img src="./assets/image/icon/voice.png" alt="" class="w-[70px] cursor-pointer h-auto hover:-translate-y-2 duration-200" id="voiceBtn">
         </div>
      </section>
     <!-- Chatbot End -->

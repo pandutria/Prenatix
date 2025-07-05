@@ -1,3 +1,20 @@
+// Animation Detect Start
+const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  rootMargin: "0px 0px -100px 0px"
+});
+
+elements.forEach(el => observer.observe(el));
+// Animation Detect End
+
+// Chatbot Start
 import { chatbotData } from "./data/chatbot.js";
 const pageWelcome = document.getElementById('pageWelcome');
 const pageChat = document.getElementById('pageChat');
@@ -8,9 +25,49 @@ const logo = '../assets/image/logo/logo_reverse.svg';
 const ask1Btn = document.getElementById('ask1Btn');
 const ask2Btn = document.getElementById('ask2Btn');
 const ask3Btn = document.getElementById('ask3Btn');
+const voiceBtn = document.getElementById('voiceBtn');
+const speakPage = document.getElementById('speakPage');
+const voiceEffect = document.getElementById("voiceEffect");
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 
 pageWelcome.style.display = 'flex';
 pageChat.style.display = 'none';
+speakPage.style.display = 'none';
+
+inputChat.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        submitBtn.click();
+    }
+});
+
+recognition.lang = 'id-ID'; 
+recognition.interimResults = false;
+recognition.maxAlternatives = 1;
+
+voiceBtn.addEventListener('click', () => {
+    speakPage.style.display = 'flex';
+    voiceEffect.play();
+    recognition.start();
+});
+
+recognition.onstart = () => {
+    console.log("mendengarkan");
+};
+
+recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    inputChat.value = transcript;
+    submitBtn.click(); 
+};
+
+recognition.onerror = (event) => {
+    console.error('Error:', event.error);
+};
+
+recognition.onend = () => {
+    console.log('Selesai dengar');
+    speakPage.style.display = 'none';
+};
 
 submitBtn.addEventListener('click', () => {
     const userChat = inputChat.value.trim();
@@ -263,3 +320,4 @@ function skeletonChat(uniqueId) {
         </div>
     `;
 }
+// Chatbot End

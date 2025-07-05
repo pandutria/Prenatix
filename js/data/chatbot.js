@@ -8,12 +8,28 @@ export const chatbotData = [
     "answer": "Hai! Terima kasih sudah mengunjungi Prenatix. Saya adalah asisten virtual yang siap membantu Anda dengan informasi seputar kehamilan, persalinan, dan perawatan bayi. Ada pertanyaan atau butuh panduan khusus? Silakan tanyakan saja!"
   },
   {
+    "question": "test",
+    "answer": "Hai! Terima kasih sudah mengunjungi Prenatix. Saya adalah asisten virtual yang siap membantu Anda dengan informasi seputar kehamilan, persalinan, dan perawatan bayi. Ada pertanyaan atau butuh panduan khusus? Silakan tanyakan saja!"
+  },
+  {
+    "question": "tes",
+    "answer": "Hai! Terima kasih sudah mengunjungi Prenatix. Saya adalah asisten virtual yang siap membantu Anda dengan informasi seputar kehamilan, persalinan, dan perawatan bayi. Ada pertanyaan atau butuh panduan khusus? Silakan tanyakan saja!"
+  },
+  {
+    "question": "siapa kamu",
+    "answer": "Terima kasih sudah mengunjungi Prenatix. Saya adalah asisten virtual yang siap membantu Anda dengan informasi seputar kehamilan, persalinan, dan perawatan bayi. Ada pertanyaan atau butuh panduan khusus? Silakan tanyakan saja!"
+  },
+  {
     "question": "makasih",
     "answer": "Dengan senang hati, jika ada pertanyaan atau butuh panduan khusus? Silakan tanyakan saja!"
   },
   {
     "question": "oke",
     "answer": "Iya, jika ada pertanyaan atau butuh panduan khusus? Silakan tanyakan saja!"
+  },
+  {
+    "question": "prenatix, kamu bisa apa",
+    "answer": "Prenatix adalah web edukasi ibu hamil yang membantu Bunda mendapatkan informasi terpercaya seputar kehamilan, mulai dari tips kesehatan, jadwal kontrol, hingga panduan perawatan diri, semua dalam satu tempat yang mudah diakses."
   },
   {
     "question": "apa itu kehamilan?",
@@ -240,7 +256,7 @@ export const chatbotData = [
     "answer": "Ya, kontrol rutin sangat penting untuk memantau kesehatan ibu dan janin. Umumnya kontrol dilakukan 1 kali sebulan hingga usia kehamilan 28 minggu, lalu 2 minggu sekali hingga 36 minggu, dan mingguan setelah itu."
   },
   {
-    "question": "apakah boleh vaksin saat hamil?",
+    "question": "apa boleh vaksin saat hamil?",
     "answer": "Beberapa vaksin diperbolehkan saat hamil, seperti vaksin tetanus, difteri, influenza, dan COVID-19. Namun vaksin hidup seperti MMR tidak dianjurkan. Selalu konsultasi ke dokter sebelum divaksin selama kehamilan."
   },
   {
