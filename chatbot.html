@@ -20,8 +20,8 @@
     <!-- Navbar End -->
 
     <!-- Chatbot Start -->
-     <section class="w-full h-screen flex flex-col justify-start pt-12 items-center relative">
-        <div class="flex flex-col justify-center items-center gap-6 hidden" id="pageWelcome">
+     <section class="w-full h-screen flex flex-col justify-start items-center relative">
+        <div class="flex flex-col justify-center items-center gap-6 pt-12" id="pageWelcome">
             <img src="./assets/image/logo/logo_chatbot.svg" alt="" class="w-[80px] h-auto">
             <div class="flex flex-col gap-1 justify-center items-center">
                 <p class="font-semibold text-[#6B6B6B] text-[20px]">Selamat Datang di <span class="text-primary">Prenatix</span> 👋</p>
@@ -42,19 +42,25 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col justify-center items-center gap-4" id="pageChat">
-            <div class="">
-
+        <div class="mt-12 overflow-x-scroll h-[72vh]">
+            <div class="pb-10">
+                <div class="flex flex-col justify-start w-[70vw] gap-2" id="pageChat">
+                    <!-- Mapping on javascript -->
+                </div>
             </div>
         </div>
         <div class="absolute bottom-16 w-[70vw] rounded-xl flex justify-between items-center gap-8">
             <div class="bg-white w-full flex justify-start items-center h-[70px] rounded-xl gap-6 shadow-lg px-8">
                 <input type="text" class="w-full font-medium text-[16px] border-0 outline-0" placeholder="Tulis pertanyaan disini..." id="inputChatbot">
-                <img src="./assets/image/icon/send.png" alt="" class="w-[26px] h-auto">
+                <img src="./assets/image/icon/send.png" alt="" class="w-[26px] relative z-50 h-auto" id="sendBtn">
             </div>
-            <img src="./assets/image/icon/voice.png" alt="" class="w-[70px] cursor-pointer h-auto" id="sendBtn">
+            <img src="./assets/image/icon/voice.png" alt="" class="w-[70px] cursor-pointer h-auto">
         </div>
      </section>
     <!-- Chatbot End -->
+
+    <!-- Javascript -->
+     <script type="module" src="./js/data/chatbot.js"></script>
+     <script type="module" src="./js/chatbot.js"></script>
 </body>
 </html>
