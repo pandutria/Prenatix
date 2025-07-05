@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prenatix - Chatbot</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/logo.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    
+<body class="bg-linear">
+    <!-- Navbar Start -->
+     <nav class="w-full h-[14vh] flex flex-col justify-center items-start fixed">
+        <a href="./index.html" class="flex justify-center gap-3 cursor-pointer items-center ml-12">
+            <img class="w-[24px] h-auto" src="./assets/image/icon/back.png" alt="">
+            <h1 class="font-medium text-[22px]">Back</h1>
+        </a>
+     </nav>
+    <!-- Navbar End -->
+
+    <!-- Chatbot Start -->
+     <section class="w-full h-screen flex flex-col justify-start pt-12 items-center relative">
+        <div class="flex flex-col justify-center items-center gap-6 hidden" id="pageWelcome">
+            <img src="./assets/image/logo/logo_chatbot.svg" alt="" class="w-[80px] h-auto">
+            <div class="flex flex-col gap-1 justify-center items-center">
+                <p class="font-semibold text-[#6B6B6B] text-[20px]">Selamat Datang di <span class="text-primary">Prenatix</span> 👋</p>
+                <h1 class="text-[28px] font-semibold text-black">Apa yang ingin Ibu ketahui hari ini?</h1>
+            </div>
+            <div class="flex justify-center items-center mt-4 gap-12">
+                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white">
+                    <img src="./assets/image/icon/chatbot_icon1.png" alt="" class="w-[45px] h-auto">
+                    <p class="font-medium text-[14px] text-[#333333]">Buatkan panduan makanan sehat untuk trimester pertama</p>
+                </div>
+                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white">
+                    <img src="./assets/image/icon/chatbot_icon2.png" alt="" class="w-[45px] h-auto">
+                    <p class="font-medium text-[14px] text-[#333333]">Tentukan jadwal kontrol sesuai usia kandungan bunda</p>
+                </div>
+                <div class="flex flex-col border-2 rounded-xl p-4 gap-6 cursor-pointer w-[280px] border-[#BEBEBE] bg-white">
+                    <img src="./assets/image/icon/chatbot_icon3.png" alt="" class="w-[45px] h-auto">
+                    <p class="font-medium text-[14px] text-[#333333]">Berikan tips agar tidur menjadi nyenyak saat hamil besar</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-4" id="pageChat">
+            <div class="">
+
+            </div>
+        </div>
+        <div class="absolute bottom-16 w-[70vw] rounded-xl flex justify-between items-center gap-8">
+            <div class="bg-white w-full flex justify-start items-center h-[70px] rounded-xl gap-6 shadow-lg px-8">
+                <input type="text" class="w-full font-medium text-[16px] border-0 outline-0" placeholder="Tulis pertanyaan disini..." id="inputChatbot">
+                <img src="./assets/image/icon/send.png" alt="" class="w-[26px] h-auto">
+            </div>
+            <img src="./assets/image/icon/voice.png" alt="" class="w-[70px] cursor-pointer h-auto" id="sendBtn">
+        </div>
+     </section>
+    <!-- Chatbot End -->
 </body>
 </html>
