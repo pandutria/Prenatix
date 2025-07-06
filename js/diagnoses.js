@@ -68,6 +68,90 @@ submitBtn.addEventListener('click', () => {
     const health = checkHealthy(userAnswers);
     const urgentResult = userUrgent(health);
 
+    if (urgentResult.text === "Sangat Tinggi") {
+        condition.innerHTML += `
+            <p class="text-[16px] font-medium">1. Pingsan atau kehilangan kesadaran</p>
+            <p class="text-[16px] font-medium">2. Perdarahan hebat atau darah mengalir terus-menerus</p>
+            <p class="text-[16px] font-medium">3. Kejang-kejang</p>
+            <p class="text-[16px] font-medium">4. Air ketuban pecah sebelum waktunya</p>
+        `;
+
+        recommendation.innerHTML += `
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Segera panggil bantuan medis darurat</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Jika memungkinkan, segera menuju IGD atau rumah sakit terdekat</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Hindari bergerak sendiri, pastikan ada yang mendampingi</p>
+            </div>
+        `;
+    } else if (urgentResult.text === "Tinggi") {
+        condition.innerHTML += `
+            <p class="text-[16px] font-medium">1. Perdarahan ringan hingga sedang</p>
+            <p class="text-[16px] font-medium">2. Pusing berat disertai rasa ingin jatuh</p>
+            <p class="text-[16px] font-medium">3. Nyeri hebat di bagian perut</p>
+            <p class="text-[16px] font-medium">4. Tubuh terasa sangat lemas</p>
+        `;
+
+        recommendation.innerHTML += `
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Segera hentikan seluruh aktivitas dan cari posisi aman</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Minum air putih dan usahakan tetap tenang</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Segera hubungi bidan, dokter, atau fasilitas kesehatan terdekat</p>
+            </div>
+        `;
+    } else if (urgentResult.text === "Sedang") {
+        condition.innerHTML += `
+            <p class="text-[16px] font-medium">1. Nyeri perut bagian bawah sedang</p>
+            <p class="text-[16px] font-medium">2. Mual terus-menerus</p>
+            <p class="text-[16px] font-medium">3. Sakit punggung hebat</p>
+            <p class="text-[16px] font-medium">4. Pandangan kabur sebentar</p>
+        `;
+
+        recommendation.innerHTML += `
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Segera kurangi aktivitas berat dan perbanyak istirahat</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Konsumsi makanan bergizi seimbang untuk meningkatkan daya tahan tubuh</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Jika keluhan tidak membaik dalam 1-2 hari, segera periksakan diri ke fasilitas kesehatan</p>
+            </div>
+        `;
+    } else {
+        condition.innerHTML += `
+            <p class="text-[16px] font-medium">1. Perut terasa nyeri ringan</p>
+            <p class="text-[16px] font-medium">2. Kram ringan pada bagian bawah perut</p>
+        `;
+
+        recommendation.innerHTML += `
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Cobalah untuk beristirahat sejenak dan perbanyak minum air putih</p>
+            </div>
+            <div class="flex items-center justify-start gap-2">
+                <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                <p class="text-[16px] font-medium">Jika gejala terus berlanjut, segera konsultasikan ke tenaga medis</p>
+            </div>
+        `;
+    }
+
     healthLevel.innerText = formatText(health);
     urgentLevel.innerText = urgentResult.text;
     scoreCount.innerHTML = `${urgentResult.score}%`;
@@ -123,7 +207,7 @@ function checkHealthy(userAnswers) {
 }
 
 function userUrgent(level) {
-    score = 100;
+    score = 90;
     let text = "Rendah";
 
     switch (level) {
