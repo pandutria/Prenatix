@@ -36,7 +36,7 @@
 
     <!-- Form Start -->
      <section class="w-full min-h-screen bg-[#A52DFF12] flex flex-col justify-center items-center fade-right">
-        <div class="bg-white rounded-xl border-[2px] border-[#00000029] mt-18 w-[80vw] min-h-[74vh] py-6 px-8 hidden">
+        <div class="bg-white rounded-xl border-[2px] border-[#00000029] mt-18 w-[80vw] min-h-[74vh] py-6 px-8" id="formPage">
             <div class="flex flex-col gap-2 w-full">
                 <div class="flex justify-between items-center">
                     <p class="font-semibold text-[20px] text-fourth">Kemajuan</p>
@@ -52,10 +52,11 @@
                 <div class="flex justify-between items-center">
                     <button id="prevBtn" class="font-semibold text-[14px] text-fourth outline-none border-2 border-[#631B99] py-[12px] cursor-pointer px-8 rounded-md">Kembali</button>
                     <button id="nextBtn" class="font-semibold text-[14px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selanjutnya</button>
+                    <button id="submitBtn" class="font-semibold text-[14px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selesai</button>
                 </div>
             </div>
         </div>
-        <div class="bg-white rounded-xl border-[2px] border-[#00000029] w-[78vw] mb-16 mt-28 min-h-[74vh] py-6 px-8" id="resultDiagnoses">
+        <div class="bg-white rounded-xl border-[2px] border-[#00000029] w-[78vw] mb-16 mt-32 min-h-[74vh] py-6 px-8" id="resultPage">
             <div class="flex flex-col gap-2 w-full">
                 <div class="flex justify-between items-center">
                     <p class="font-semibold text-[20px] text-fourth">Skor Kesehatan Ibu</p>
@@ -67,23 +68,23 @@
                 <div class="mt-8 flex justify-between items-center gap-8">
                     <div class="bg-[#631B9933] w-full p-6 rounded-lg flex flex-col gap-2">
                         <p class="font-semibold text-[18px] text-fourth">Tingkat Keparahan</p>
-                        <p class="font-regular text-[16px] text-black">Ringan</p>
+                        <p class="font-regular text-[16px] text-black" id="healthLevel">Ringan</p>
                     </div>
                     <div class="bg-[#A52DFF33] w-full p-6 rounded-lg flex flex-col gap-2">
                         <p class="font-semibold text-[18px] text-primary">Tingkat Urgensi</p>
-                        <p class="font-regular text-[16px] text-black">Rendah</p>
+                        <p class="font-regular text-[16px] text-black" id="urgentLevel">Rendah</p>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 mt-8">
                     <h1 class="font-semibold text-[22px] text-fourth">Kemungkinan Kondisi:</h1>
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-1" id="condition">
                         <p class="text-[16px] font-medium">1. Perut terasa nyeri ringan</p>
                         <p class="text-[16px] font-medium">2. Kram ringan pada bagian bawah perut</p>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 mt-8">
                     <h1 class="font-semibold text-[22px] text-fourth">Rekomendasi dari Prenatix:</h1>
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-1" id="recommendation">
                         <div class="flex items-center justify-start gap-2">
                             <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
                             <p class="text-[16px] font-medium">Cobalah untuk beristirahat sejenak dan perbanyak minum air putih</p>
@@ -94,6 +95,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex flex-col gap-4 p-6 bg-[#CC00FF26] outline-none border-2 border-[#84209DB3] rounded-lg mt-8">
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/image/icon/warning.png" alt="" class="w-[34px] h-auto">
+                        <p class="text-[20px] text-fourth font-semibold">Peringatan Penting</p>
+                    </div>
+                    <p class="font-medium text-fourth text-[17px] leading-[30px]">Hasil ini hanya merupakan estimasi awal dan tidak menggantikan diagnosis langsung dari dokter. <br/>Segera hubungi tenaga medis jika:</p>
+                    <div class="flex flex-col gap-2 font-medium text-fourth text-[16px]">
+                        <p>• Gejala terasa sangat mengganggu</p>
+                        <p>• Kondisi memburuk secara cepat</p>
+                        <p>• Terjadi perdarahan atau nyeri tidak tertahankan</p>
+                    </div>
+                    <p class="font-medium text-fourth text-[18px]">Segera ambil langkah penanganan:</p>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/image/icon/phone.png" alt="" class="w-[30px] h-auto">
+                        <p class="text-[18px] font-medium text-[#E40004]">Konsultasi dengan dokter</p>
+                    </div>
+                </div
             </div>
         </div>
      </section>
