@@ -277,8 +277,8 @@ function dataChat(sender, message) {
     if (sender === "Saya") {
         pageChat.innerHTML += `
             <div class="flex flex-col justify-center items-end gap-3">
-                <h1 class="text-[22px] font-medium text-primary">${sender}</h1>
-                <p class="max-w-[700px] shadow-lg text-justify px-4 py-6 bg-[#A52DFF] text-white rounded-lg font-regular text-[14px]">${message}</p>
+                <h1 class="lg:text-[22px] text-[16px] font-medium text-primary">${sender}</h1>
+                <p class="lg:max-w-[500px] max-w-[280px] shadow-lg text-justify px-4 lg:py-6 py-4 bg-[#A52DFF] text-white rounded-lg font-regular text-[12px] lg:text-[14px]">${message}</p>
             </div>
         `;
     } else {
@@ -286,8 +286,8 @@ function dataChat(sender, message) {
 
         pageChat.innerHTML += `
             <div class="flex flex-col justify-center items-start gap-3">
-                <h1 class="text-[22px] font-medium text-primary">${sender}</h1>
-                <p id="typing-${uniqueId}" class="max-w-[700px] shadow-lg text-justify px-4 py-6 bg-[#A52DFF] text-white rounded-lg font-regular text-[14px]"></p>
+                <h1 class="lg:text-[22px] text-[16px] font-medium text-primary">${sender}</h1>
+                <p id="typing-${uniqueId}" class="lg:max-w-[500px] max-w-[280px] shadow-lg text-justify px-4 lg:py-6 py-4 bg-[#A52DFF] text-white rounded-lg font-regular text-[12px] lg:text-[14px]"></p>
             </div>
         `;
 
@@ -310,8 +310,8 @@ function dataChat(sender, message) {
 function skeletonChat(uniqueId) {
     pageChat.innerHTML += `
         <div class="flex flex-col justify-center items-start gap-3" id="skeleton-${uniqueId}">
-            <h1 class="text-[22px] font-medium text-primary">Prenatix Bot</h1>
-            <div class="max-w-[500px] animate-pulse px-4 py-6 bg-[#A52DFF] flex flex-col justify-center items-center rounded-lg gap-2">
+            <h1 class="lg:text-[22px] text-[16px] font-medium text-primary">Prenatix Bot</h1>
+            <div class="lg:max-w-[500px] max-w-[200px] animate-pulse px-4 py-6 bg-[#A52DFF] flex flex-col justify-center items-center rounded-lg gap-2">
                 <img src="${logo}" class="w-[20px] h-[20px] opacity-80" />
                 <div class="w-full bg-[#C273FF] h-[6px] rounded-full overflow-hidden">
                     <div class="h-full bg-[#E3B9FF] animate-loadingBar"></div>

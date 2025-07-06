@@ -68,7 +68,7 @@ export const chatbotData = [
     "answer": "Ibu hamil diperbolehkan minum kopi, tetapi sebaiknya tidak lebih dari 200 mg kafein per hari, setara dengan sekitar 1-2 cangkir kopi kecil. Konsumsi berlebihan dapat meningkatkan risiko komplikasi seperti keguguran atau bayi lahir dengan berat badan rendah."
   },
   {
-    "question": "apakah aman melakukan olahraga saat hamil?",
+    "question": "apakah aman melakukan berolahraga saat hamil?",
     "answer": "Olahraga ringan sangat dianjurkan selama kehamilan karena memberikan manfaat bagi kesehatan ibu dan janin. Contohnya jalan kaki, senam ibu hamil, atau yoga prenatal. Namun, hindari olahraga yang terlalu berat atau berisiko tinggi cedera."
   },
   {

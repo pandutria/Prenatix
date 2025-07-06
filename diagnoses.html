@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenatix - Diagnosa</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/logo.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="fixed w-full bg-white flex flex-row items-center lg:justify-center justify-between h-[12vh] lg:gap-100 gap-0 px-5 border-[1px] border-[#00000029] bg-white z-50">
+      <div class="flex flex-row items-center gap-3">
+        <img src="./assets/image/logo/logo.svg" class="w-[23px] h-auto object-contain" alt="">
+        <p class="text-primary font-semibold text-[22px]">Prenatix</p>
+      </div>
+      <div class="flex items-center justify-center gap-8 lg:relative fixed bg-white lg:flex-row flex-col navbar-active lg:h-auto h-screen lg:w-auto w-[240px] top-0">
+        <a href="#" class="font-semibold text-primary text-[16px]">Beranda</a>
+        <a href="" class="font-regular text-black text-[16px]">Tentang Kami</a>
+        <a href="" class="font-regular text-black text-[16px]">Layanan Kami</a>
+        <a href="" class="font-regular text-black text-[16px]">Testimoni</a>
+        <button class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-3 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]">
+          <img src="./assets/image/icon/call.png" class="lg:w-[16px] w-[14px] h-auto object-contain"  alt="">
+          <p class="font-semibold text-white lg:text-[16px] text-[14px]">Hubungi Kami</p>
+        </button>
+      </div>
+      <div class="display-flex flex-col h-[20px] relative z-50 justify-between items-center" id="listBtn">
+        <div class="bg-black h-[2px] w-[24px] navbar-btn-active-top" id="listBtnTop"></div>
+        <div class="bg-black h-[2px] w-[24px] navbar-btn-active-center" id="listBtnCenter"></div>
+        <div class="bg-black h-[2px] w-[24px] navbar-btn-active-bottom" id="listBtnBottom"></div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Form Start -->
+     <section class="w-full min-h-screen bg-[#A52DFF12] flex flex-col justify-center items-center fade-right">
+        <div class="bg-white rounded-xl border-[2px] border-[#00000029] mt-18 w-[80vw] min-h-[74vh] py-6 px-8 hidden">
+            <div class="flex flex-col gap-2 w-full">
+                <div class="flex justify-between items-center">
+                    <p class="font-semibold text-[20px] text-fourth">Kemajuan</p>
+                    <p class="font-semibold text-[18px] text-fourth" id="progressCount">20%</p>
+                </div>
+                <div class="rounded-lg w-full h-[18px] bg-[#EAEAEA]">
+                    <div class="h-full bg-gradient-to-r from-[#AD40FF] to-[#4E0089] w-[20%] duration-200 rounded-lg" id="progressBar"></div>
+                </div>
+            </div>
+            <div class="flex flex-col w-[98%] mt-8 flex flex-col gap-6  mx-auto">
+                <h1 class="font-medium  text-[24px]" id="question">1. Ceritakan keluhan utama yang sedang Ibu rasakan saat ini</h1>
+                <textarea id="userForm" class="w-ful h-[200px] border-[2px] border-[#00000029] outline-none focus-within:border-[#A52DFF] font-medium text-[14px] rounded-lg p-4" placeholder="Tulis jawaban disini..."></textarea>
+                <div class="flex justify-between items-center">
+                    <button id="prevBtn" class="font-semibold text-[14px] text-fourth outline-none border-2 border-[#631B99] py-[12px] cursor-pointer px-8 rounded-md">Kembali</button>
+                    <button id="nextBtn" class="font-semibold text-[14px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selanjutnya</button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl border-[2px] border-[#00000029] w-[78vw] mb-16 mt-28 min-h-[74vh] py-6 px-8" id="resultDiagnoses">
+            <div class="flex flex-col gap-2 w-full">
+                <div class="flex justify-between items-center">
+                    <p class="font-semibold text-[20px] text-fourth">Skor Kesehatan Ibu</p>
+                    <p class="font-semibold text-[18px] text-fourth" id="scoreCount">80%</p>
+                </div>
+                <div class="rounded-lg w-full h-[18px] bg-[#EAEAEA]">
+                    <div class="h-full bg-gradient-to-r from-[#AD40FF] to-[#4E0089] w-[80%] duration-200 rounded-lg" id="scoreBar"></div>
+                </div>
+                <div class="mt-8 flex justify-between items-center gap-8">
+                    <div class="bg-[#631B9933] w-full p-6 rounded-lg flex flex-col gap-2">
+                        <p class="font-semibold text-[18px] text-fourth">Tingkat Keparahan</p>
+                        <p class="font-regular text-[16px] text-black">Ringan</p>
+                    </div>
+                    <div class="bg-[#A52DFF33] w-full p-6 rounded-lg flex flex-col gap-2">
+                        <p class="font-semibold text-[18px] text-primary">Tingkat Urgensi</p>
+                        <p class="font-regular text-[16px] text-black">Rendah</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 mt-8">
+                    <h1 class="font-semibold text-[22px] text-fourth">Kemungkinan Kondisi:</h1>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-[16px] font-medium">1. Perut terasa nyeri ringan</p>
+                        <p class="text-[16px] font-medium">2. Kram ringan pada bagian bawah perut</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 mt-8">
+                    <h1 class="font-semibold text-[22px] text-fourth">Rekomendasi dari Prenatix:</h1>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-start gap-2">
+                            <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                            <p class="text-[16px] font-medium">Cobalah untuk beristirahat sejenak dan perbanyak minum air putih</p>
+                        </div>
+                        <div class="flex items-center justify-start gap-2">
+                            <img src="./assets/image/icon/arrow_right.png" alt="" class="w-[18px] h-auto">
+                            <p class="text-[16px] font-medium">Jika gejala terus berlanjut, segera konsultasikan ke tenaga medis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Form End -->
+
+    <!-- Javascript -->
+     <script type="module" src="./js/data/diagnoses.js"></script>
+     <script type="module" src="./js/diagnoses.js"></script>
+</body>
+</html>
