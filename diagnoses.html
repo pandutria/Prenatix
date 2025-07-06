@@ -34,74 +34,81 @@
     </nav>
     <!-- Navbar End -->
 
+    <!-- Spinner Start -->
+    <div id="loadingSpinner" class="fixed inset-0 duration-200 bg-white bg-opacity-40 flex flex-col gap-12 items-center justify-center z-50">
+        <div class="w-20 h-20 border-6 border-[#A52DFF] border-t-transparent rounded-full animate-spin"></div>
+        <h1 class="font-semibold text-black lg:text-[24px] text-center text-[16px] lg:w-auto w-[260px] mx-auto">Prenatix Sedang Memuat Jawaban...</h1>
+    </div>
+    <!-- Spinner End -->
+
     <!-- Form Start -->
      <section class="w-full min-h-screen bg-[#A52DFF12] flex flex-col justify-center items-center fade-right">
-        <div class="bg-white rounded-xl border-[2px] border-[#00000029] mt-18 w-[80vw] min-h-[74vh] py-6 px-8" id="formPage">
+        <div class="bg-white rounded-xl border-[2px] border-[#00000029] mt-18 lg:w-[80vw] w-[90vw] min-h-[74vh] py-6 px-8" id="formPage">
             <div class="flex flex-col gap-2 w-full">
                 <div class="flex justify-between items-center">
-                    <p class="font-semibold text-[20px] text-fourth">Kemajuan</p>
-                    <p class="font-semibold text-[18px] text-fourth" id="progressCount">20%</p>
+                    <p class="font-semibold lg:text-[20px] text-[16px] text-fourth">Kemajuan</p>
+                    <p class="font-semibold lg:text-[18px] text-[16px] text-fourth" id="progressCount">20%</p>
                 </div>
-                <div class="rounded-lg w-full h-[18px] bg-[#EAEAEA]">
+                <div class="rounded-lg w-full lg:h-[18px] h-[16px] bg-[#EAEAEA]">
                     <div class="h-full bg-gradient-to-r from-[#AD40FF] to-[#4E0089] w-[20%] duration-200 rounded-lg" id="progressBar"></div>
                 </div>
             </div>
             <div class="flex flex-col w-[98%] mt-8 flex flex-col gap-6  mx-auto">
-                <h1 class="font-medium  text-[24px]" id="question">1. Ceritakan keluhan utama yang sedang Ibu rasakan saat ini</h1>
-                <textarea id="userForm" class="w-ful h-[200px] border-[2px] border-[#00000029] outline-none focus-within:border-[#A52DFF] font-medium text-[14px] rounded-lg p-4" placeholder="Tulis jawaban disini..."></textarea>
-                <div class="flex justify-between items-center">
-                    <button id="prevBtn" class="font-semibold text-[14px] text-fourth outline-none border-2 border-[#631B99] py-[12px] cursor-pointer px-8 rounded-md">Kembali</button>
-                    <button id="nextBtn" class="font-semibold text-[14px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selanjutnya</button>
-                    <button id="submitBtn" class="font-semibold text-[14px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selesai</button>
+                <h1 class="font-medium lg:text-[24px] text-[16px]" id="question">1. Ceritakan keluhan utama yang sedang Ibu rasakan saat ini</h1>
+                <textarea id="userForm" class="w-ful h-[200px] border-[2px] border-[#00000029] outline-none focus-within:border-[#A52DFF] font-medium lg:text-[14px] text-[12px] rounded-lg p-4" placeholder="Tulis jawaban disini..."></textarea>
+                <div class="flex justify-between items-center lg:mt-0 mt-4">
+                    <button id="prevBtn" class="font-semibold lg:text-[14px] text-[12px] text-fourth outline-none border-2 border-[#631B99] py-[12px] cursor-pointer outline-none lg:px-8 px-4 rounded-md">Kembali</button>
+                    <button id="nextBtn" class="font-semibold lg:text-[14px] text-[12px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selanjutnya</button>
+                    <button id="submitBtn" class="font-semibold lg:text-[14px] text-[12px] text-white outline-none border-0 bg-gradient-to-r from-[#AD40FF] to-[#4E0089] py-[13px] cursor-pointer px-8 rounded-md">Selesai</button>
                 </div>
             </div>
         </div>
-        <div class="bg-white rounded-xl border-[2px] border-[#00000029] w-[78vw] mb-16 mt-32 min-h-[74vh] py-6 px-8" id="resultPage">
+        <div class="bg-white rounded-xl border-[2px] border-[#00000029] lg:w-[78vw] w-[90vw] mb-16 mt-32 min-h-[74vh] py-6 px-8" id="resultPage">
             <div class="flex flex-col gap-2 w-full">
                 <div class="flex justify-between items-center">
-                    <p class="font-semibold text-[20px] text-fourth">Skor Kesehatan Ibu</p>
-                    <p class="font-semibold text-[18px] text-fourth" id="scoreCount">80%</p>
+                    <p class="font-semibold lg:text-[20px] text-[16px] text-fourth">Skor Kesehatan Ibu</p>
+                    <p class="font-semibold lg:text-[18px] text-[16px] text-fourth" id="scoreCount">80%</p>
                 </div>
-                <div class="rounded-lg w-full h-[18px] bg-[#EAEAEA]">
+                <div class="rounded-lg w-full lg:h-[18px] h-[16px] bg-[#EAEAEA]">
                     <div class="h-full bg-gradient-to-r from-[#AD40FF] to-[#4E0089] w-[80%] duration-200 rounded-lg" id="scoreBar"></div>
                 </div>
-                <div class="mt-8 flex justify-between items-center gap-8">
-                    <div class="bg-[#631B9933] w-full p-6 rounded-lg flex flex-col gap-2">
-                        <p class="font-semibold text-[18px] text-fourth">Tingkat Keparahan</p>
-                        <p class="font-regular text-[16px] text-black" id="healthLevel">Ringan</p>
+                <div class="mt-8 flex justify-between items-center lg:gap-8 gap-4">
+                    <div class="bg-[#631B9933] w-full lg:p-6 p-3 rounded-lg flex flex-col gap-2">
+                        <p class="font-semibold lg:text-[18px] text-[14px] text-fourth">Tingkat Keparahan</p>
+                        <p class="font-regular lg:text-[16px] text-[12px] text-black" id="healthLevel">Ringan</p>
                     </div>
-                    <div class="bg-[#A52DFF33] w-full p-6 rounded-lg flex flex-col gap-2">
-                        <p class="font-semibold text-[18px] text-primary">Tingkat Urgensi</p>
-                        <p class="font-regular text-[16px] text-black" id="urgentLevel">Rendah</p>
+                    <div class="bg-[#A52DFF33] w-full lg:p-6 p-3 rounded-lg flex flex-col gap-2">
+                        <p class="font-semibold lg:text-[18px] text-[14px] text-primary">Tingkat Urgensi</p>
+                        <p class="font-regular lg:text-[16px] text-[12px] text-black" id="urgentLevel">Rendah</p>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 mt-8">
-                    <h1 class="font-semibold text-[22px] text-fourth">Kemungkinan Kondisi:</h1>
+                    <h1 class="font-semibold lg:text-[22px] text-[18px] text-fourth">Kemungkinan Kondisi:</h1>
                     <div class="flex flex-col gap-1" id="condition">
                         <!-- On Javascript -->
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 mt-8">
-                    <h1 class="font-semibold text-[22px] text-fourth">Rekomendasi dari Prenatix:</h1>
+                    <h1 class="font-semibold lg:text-[22px] text-[18px] text-fourth">Rekomendasi dari Prenatix:</h1>
                     <div class="flex flex-col gap-1" id="recommendation">
                         <!-- On Javascript -->
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 p-6 bg-[#CC00FF26] outline-none border-2 border-[#84209DB3] rounded-lg mt-8">
                     <div class="flex items-center gap-3">
-                        <img src="./assets/image/icon/warning.png" alt="" class="w-[34px] h-auto">
-                        <p class="text-[20px] text-fourth font-semibold">Peringatan Penting</p>
+                        <img src="./assets/image/icon/warning.png" alt="" class="lg:w-[34px] w-[26px] h-auto">
+                        <p class="lg:text-[20px] text-[16px] text-fourth font-semibold">Peringatan Penting</p>
                     </div>
-                    <p class="font-medium text-fourth text-[17px] leading-[30px]">Hasil ini hanya merupakan estimasi awal dan tidak menggantikan diagnosis langsung dari dokter. <br/>Segera hubungi tenaga medis jika:</p>
-                    <div class="flex flex-col gap-2 font-medium text-fourth text-[16px]">
+                    <p class="font-medium text-fourth lg:text-[17px] text-[12px] lg:leading-[30px] leading-auto lg:text-start text-justify">Hasil ini hanya merupakan estimasi awal dan tidak menggantikan diagnosis langsung dari dokter. <br class="display-hidden"/>Segera hubungi tenaga medis jika:</p>
+                    <div class="flex flex-col gap-2 font-medium text-fourth lg:text-[16px] text-[12px]">
                         <p>• Gejala terasa sangat mengganggu</p>
                         <p>• Kondisi memburuk secara cepat</p>
                         <p>• Terjadi perdarahan atau nyeri tidak tertahankan</p>
                     </div>
-                    <p class="font-medium text-fourth text-[18px]">Segera ambil langkah penanganan:</p>
+                    <p class="font-medium text-fourth lg:text-[18px] text-[14px]">Segera ambil langkah penanganan:</p>
                     <div class="flex items-center gap-3">
-                        <img src="./assets/image/icon/phone.png" alt="" class="w-[30px] h-auto">
-                        <p class="text-[18px] font-medium text-[#E40004]">Konsultasi dengan dokter</p>
+                        <img src="./assets/image/icon/phone.png" alt="" class="lg:w-[30px] w-[20px] h-auto">
+                        <p class="lg:text-[18px] text-[14x] font-medium text-[#E40004]">Konsultasi dengan dokter</p>
                     </div>
                 </div
             </div>
