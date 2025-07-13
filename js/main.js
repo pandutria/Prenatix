@@ -110,32 +110,3 @@ function autoScroll() {
 
 autoScroll();
 // Testimoni End
-
-
-// Consultation Start
-import consultation from "./data/consultation.js";
-
-window.addEventListener("DOMContentLoaded", () => {
-  const consultationContainer = document.getElementById("consultationContainer");
-   if (!consultationContainer) {
-    console.error("Element #consultationContainer not found!");
-    return;
-  }
-
-
-  let consultationHTML = '';
-
-  consultation.forEach((data) => {
-    consultationHTML += `
-      <div class="flex flex-col rounded-[10px] px-3 py-4 overflow-hidden items-center" style="box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);">
-        <img src="" class="w-60 h-45 object-cover rounded-[10px]" alt="">
-        <h1 class="font-bold text-secondary text-[22px] pt-3">${data.name}</h1>
-        <p class="font-semibold text-gray text-[14px]">${data.category}</p>
-        <a href="#" class="font-semibold text-white px-9 py-2 rounded-[5px] text-[16px] bg-gradient-to-r from-[#AD40FF] to-[#4E0089] mt-3">Pesan Sekarang</a>
-      </div>
-    `;
-  });
-
-  consultationContainer.innerHTML = consultationHTML;
-});
-// Consultation End
