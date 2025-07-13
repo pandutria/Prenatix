@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prenatix - Consultation</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/logo.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="fixed w-full flex flex-row items-center lg:justify-center justify-between h-[12vh] lg:gap-100 gap-0 px-5 border-[1px] border-[#00000029] bg-white z-50"
+    >
+      <a href="#" class="flex flex-row items-center gap-3">
+        <img
+          src="./assets/image/logo/logo.svg"
+          class="w-[23px] h-auto object-contain"
+          alt=""
+        />
+        <p class="text-primary font-semibold text-[22px]">Prenatix</p>
+      </a>
+      <div
+        class="flex items-center justify-center gap-8 lg:relative fixed bg-white lg:flex-row flex-col navbar-active lg:h-auto h-screen lg:w-auto w-[240px] top-0"
+      >
+        <a href="#" class="font-regular text-black text-[16px]">Beranda</a>
+        <a href="#about" class="font-regular text-black text-[16px]"
+          >Tentang Kami</a
+        >
+        <a href="#service" class="font-regular text-black text-[16px]"
+          >Layanan Kami</a
+        >
+        <a href="#testimony" class="font-regular text-black text-[16px]"
+          >Testimoni</a
+        >
+        <button
+          class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-3 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]"
+        >
+          <img
+            src="./assets/image/icon/call.png"
+            class="lg:w-[16px] w-[14px] h-auto object-contain"
+            alt=""
+          />
+          <p class="font-semibold text-white lg:text-[16px] text-[14px]">
+            Hubungi Kami
+          </p>
+        </button>
+      </div>
+      <div
+        class="display-flex flex-col h-[20px] relative z-50 justify-between items-center"
+        id="listBtn"
+      >
+        <div
+          class="bg-black h-[2px] w-[24px] navbar-btn-active-top"
+          id="listBtnTop"
+        ></div>
+        <div
+          class="bg-black h-[2px] w-[24px] navbar-btn-active-center"
+          id="listBtnCenter"
+        ></div>
+        <div
+          class="bg-black h-[2px] w-[24px] navbar-btn-active-bottom"
+          id="listBtnBottom"
+        ></div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <section
+      class="w-full h-screen flex flex-col justify-center items-center gap-1"
+    >
+      <h1 class="font-bold text-gradient text-[35px]">Temui Dokter Kami</h1>
+      <p class="font-medium text-gray text-[15px] w-180 text-center">
+        Temukan dokter berpengalaman dan terpercaya untuk mendukung kesehatan
+        Anda.  Konsultasi mudah, cepat, dan aman bersama para spesialis
+        terverifikasi.
+      </p>
+      <div id="consultationContainer" class="flex flex-row pt-5 gap-7">
+        <!-- <div class="flex flex-col rounded-[10px] px-3 py-4 overflow-hidden items-center"  style="box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);">
+            <img src="./assets/image/pic/consultation/1.png" class="w-60 h-45 object-cover rounded-[10px]" alt="">
+            <h1 class="font-bold text-secondary text-[22px] pt-3">Dr. Syifa Mauliada</h1>
+            <p class="font-semibold text-gray text-[14px]">Dokter Kandungan</p>
+            <a href="" class="font-semibold text-white px-9 py-2 rounded-[5px] text-[16px] bg-gradient-to-r from-[#AD40FF] to-[#4E0089] mt-3">Pesan Sekarang</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Javascript -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

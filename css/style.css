@@ -1,25 +1,25 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url('../assets/font/Poppins-Bold.ttf');
+  font-family: "Poppins-Bold";
+  src: url("../assets/font/Poppins-Bold.ttf");
 }
 
 @font-face {
-    font-family: 'Poppins-SemiBold';
-    src: url('../assets/font/Poppins-SemiBold.ttf');
+  font-family: "Poppins-SemiBold";
+  src: url("../assets/font/Poppins-SemiBold.ttf");
 }
 
 @font-face {
-    font-family: 'Poppins-Medium';
-    src: url('../assets/font/Poppins-Medium.ttf');
+  font-family: "Poppins-Medium";
+  src: url("../assets/font/Poppins-Medium.ttf");
 }
 
 @font-face {
-    font-family: 'Poppins-Regular';
-    src: url('../assets/font/Poppins-Regular.ttf');
+  font-family: "Poppins-Regular";
+  src: url("../assets/font/Poppins-Regular.ttf");
 }
 
 * ::-webkit-scrollbar {
@@ -28,90 +28,100 @@ html {
 
 /* Background */
 .bg-linear {
-  background: #FFF;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(247, 235, 255, 1) 100%);  
+  background: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 235, 255, 1) 100%
+  );
 }
 
 /* Font Family */
 .font-bold {
-    font-family: 'Poppins-Bold';
+  font-family: "Poppins-Bold";
 }
 
 .font-semibold {
-    font-family: 'Poppins-SemiBold';
+  font-family: "Poppins-SemiBold";
 }
 
 .font-medium {
-    font-family: 'Poppins-Medium';
+  font-family: "Poppins-Medium";
 }
 
 .font-regular {
-    font-family: 'Poppins-Regular';
+  font-family: "Poppins-Regular";
 }
 
 /* Text Color Assets */
 .text-primary {
-    color: #A52DFF;
+  color: #a52dff;
 }
 
 .text-secondary {
-    color: #4E0089;
+  color: #4e0089;
 }
 
 .text-third {
-    color: #7900D4;
+  color: #7900d4;
 }
 
 .text-fourth {
-    color: #631B99;
+  color: #631b99;
 }
 
 .text-black {
-    color: #222222;
+  color: #222222;
 }
 
 .text-lightBlack {
-    color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .text-white {
-    color: #FFF;
+  color: #fff;
 }
 
 .text-gray {
-    color: #6B6B6B;
+  color: #6b6b6b;
 }
 
 .text-gray-secondary {
-    color: #5F5F5F;
+  color: #5f5f5f;
 }
 
 .text-lightGray {
-    color: #838383;
+  color: #838383;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ad40ff, #4e0089);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Background Assets */
 .bg-purple {
-    background-color: #5A009D;
+  background-color: #5a009d;
 }
 
 /* Border Assets */
 .border-primary {
-    outline: none;
-    border: 2px solid #A52DFF;
+  outline: none;
+  border: 2px solid #a52dff;
 }
 
 /* Display Hidden Responsive */
 .display-hidden {
-    display: block;
+  display: block;
 }
 
 .display-hidden-flex {
-    display: flex;
+  display: flex;
 }
 
 .display-flex {
-    display: none;
+  display: none;
 }
 
 /* Animation */
@@ -142,7 +152,9 @@ html {
 }
 
 /* Fade Animation */
-.fade-up, .fade-left, .fade-right {
+.fade-up,
+.fade-left,
+.fade-right {
   opacity: 0;
 }
 
@@ -192,49 +204,49 @@ html {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    /* Display Hidden Responsive */
-    .display-hidden,
-    .display-hidden-flex {
-        display: none;
-    }
+  /* Display Hidden Responsive */
+  .display-hidden,
+  .display-hidden-flex {
+    display: none;
+  }
 
-    .display-flex {
-        display: flex;
-    }
+  .display-flex {
+    display: flex;
+  }
 
-    /* Navbar Active Start */
-    .navbar-active {
-        right: -300%;
-        transition: all ease-in-out 0.6s;
-    }
+  /* Navbar Active Start */
+  .navbar-active {
+    right: -300%;
+    transition: all ease-in-out 0.6s;
+  }
 
-    .navbar-active.active {
-        right: 0;
-        transition: all ease-in-out 0.6s;
-    }
+  .navbar-active.active {
+    right: 0;
+    transition: all ease-in-out 0.6s;
+  }
 
-    .navbar-btn-active-top,
-    .navbar-btn-active-center,
-    .navbar-btn-active-bottom {
-        rotate: 0deg;
-        transition: all ease-in-out 0.7s;
-    }  
-    
-    .navbar-btn-active-top.active {
-        transition: all ease-in-out 0.7s;
-        rotate: 45deg;
-        transform: translateY(630%);
-    }
+  .navbar-btn-active-top,
+  .navbar-btn-active-center,
+  .navbar-btn-active-bottom {
+    rotate: 0deg;
+    transition: all ease-in-out 0.7s;
+  }
 
-    .navbar-btn-active-center.active {
-        transition: all ease-in-out 0.7s;
-        opacity: 0;
-    }
+  .navbar-btn-active-top.active {
+    transition: all ease-in-out 0.7s;
+    rotate: 45deg;
+    transform: translateY(630%);
+  }
 
-    .navbar-btn-active-bottom.active {
-        rotate: -45deg;
-        transition: all ease-in-out 0.7s;
-        transform: translateY(-630%);
-    }
-    /* Navbar Active End */
+  .navbar-btn-active-center.active {
+    transition: all ease-in-out 0.7s;
+    opacity: 0;
+  }
+
+  .navbar-btn-active-bottom.active {
+    rotate: -45deg;
+    transition: all ease-in-out 0.7s;
+    transform: translateY(-630%);
+  }
+  /* Navbar Active End */
 }
