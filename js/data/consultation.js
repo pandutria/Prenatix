@@ -11,7 +11,7 @@ const consultation = [
         name: "Dr. Syifa Maulida",
         category: "Dokter Kandungan",
         image: img1,
-        price: 50000,
+        price: "Rp. 50.000,00",
         specialization: ["Pemeriksa Kehamilan", "USG", "Persalinan"]
     },
     {
@@ -19,7 +19,7 @@ const consultation = [
         name: "Dr. Maya Rahma",
         category: "Spesialis Gizi Ibu Hamil",
         image: img2,
-        price: 50000,
+        price: "Rp. 60.000,00",
         specialization: ["Pemeriksa Kehamilan", "USG", "Persalinan"]
     },
     {
@@ -27,7 +27,7 @@ const consultation = [
         name: "Dr. Raka Pradana",
         category: "Psikolog Kehamilan",
         image: img3,
-        price: 50000,
+        price: "Rp. 70.000,00",
         specialization: ["Pemeriksa Kehamilan", "USG", "Persalinan"]
     },
     {
@@ -35,7 +35,7 @@ const consultation = [
         name: "Dr. Aulia Rahma",
         category: "Spesialis Kandungan",
         image: img4,
-        price: 50000,
+        price: "Rp. 80.000,00",
         specialization: ["Pemeriksa Kehamilan", "USG", "Persalinan"]
     },
     {
@@ -43,7 +43,7 @@ const consultation = [
         name: "Dr. Bima Prasetyo",
         category: "Dokter Umum & Kesehatan ibu",
         image: img5,
-        price: 50000,
+        price: "Rp. 90.000,00",
         specialization: ["Pemeriksa Kehamilan", "USG", "Persalinan"]
     },
     {
@@ -51,7 +51,7 @@ const consultation = [
         name: "Dr. Diah Salsabila",
         category: "Ahli Gizi Kehamilan",
         image: img6,
-        price: 50000,
+        price: "Rp. 100.000,00",
         specialization: ["Pemeriksa Kehamilan", "USG", "Persalinan"]
     },
 ]

@@ -250,3 +250,15 @@ html {
   }
   /* Navbar Active End */
 }
+
+/* Sembunyikan ikon kalender di Chrome, Safari, Edge */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="date"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
