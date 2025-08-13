@@ -32,6 +32,10 @@ html {
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(247, 235, 255, 1) 100%);  
 }
 
+.bg-primary {
+  background: linear-gradient(to right, #AD40FF, #4E0089);
+}
+
 /* Font Family */
 .font-bold {
     font-family: 'Poppins-Bold';
