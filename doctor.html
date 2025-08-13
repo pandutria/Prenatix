@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prenatix - Consultation</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/logo.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="fixed w-full flex flex-row items-center lg:justify-center justify-between h-[12vh] lg:gap-100 gap-0 px-5 border-[1px] border-[#00000029] bg-white z-50"
+    >
+      <a href="#" class="flex flex-row items-center gap-3">
+        <img
+          src="./assets/image/logo/logo.svg"
+          class="w-[23px] h-auto object-contain"
+          alt=""
+        />
+        <p class="text-primary font-semibold text-[22px]">Prenatix</p>
+      </a>
+      <div
+        class="flex items-center justify-center gap-8 lg:relative fixed bg-white lg:flex-row flex-col navbar-active lg:h-auto h-screen lg:w-auto w-[240px] top-0"
+      >
+        <a href="#" class="font-regular text-black text-[16px]">Beranda</a>
+        <a href="#about" class="font-regular text-black text-[16px]"
+          >Tentang Kami</a
+        >
+        <a href="#service" class="font-regular text-black text-[16px]"
+          >Layanan Kami</a
+        >
+        <a href="#testimony" class="font-regular text-black text-[16px]"
+          >Testimoni</a
+        >
+        <button
+          class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-3 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]"
+        >
+          <img
+            src="./assets/image/icon/call.png"
+            class="lg:w-[16px] w-[14px] h-auto object-contain"
+            alt=""
+          />
+          <p class="font-semibold text-white lg:text-[16px] text-[14px]">
+            Hubungi Kami
+          </p>
+        </button>
+      </div>
+      <div
+        class="display-flex flex-col h-[20px] relative z-50 justify-between items-center"
+        id="listBtn"
+      >
+        <div
+          class="bg-black h-[2px] w-[24px] navbar-btn-active-top"
+          id="listBtnTop"
+        ></div>
+        <div
+          class="bg-black h-[2px] w-[24px] navbar-btn-active-center"
+          id="listBtnCenter"
+        ></div>
+        <div
+          class="bg-black h-[2px] w-[24px] navbar-btn-active-bottom"
+          id="listBtnBottom"
+        ></div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+     <!-- List Doctor Start -->
+    <section
+      class="w-full flex flex-col pt-[17vh] justify-center items-center gap-1 lg:px-0 px-5"
+    >
+      <h1 class="font-bold text-gradient lg:text-[35px] text-[30px]">Temui Dokter Kami</h1>
+      <p class="font-medium text-gray lg:text-[15px] text-[12px] lg:w-180 w-full text-center">
+        Temukan dokter berpengalaman dan terpercaya untuk mendukung kesehatan
+        Anda. Konsultasi mudah, cepat, dan aman bersama para spesialis
+        terverifikasi.
+      </p>
+      <div id="consultationContainer" class="flex lg:flex-row md:flex-row flex-col flex-wrap lg:w-250 w-full pt-5 gap-x-8 lg:gap-y-12 gap-y-8 justify-center">
+        <!-- <div class="flex flex-col rounded-[10px] px-3 py-4 overflow-hidden items-center"  style="box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);">
+            <img src="./assets/image/pic/consultation/1.png" class="w-60 h-45 object-cover rounded-[10px]" alt="">
+            <h1 class="font-bold text-secondary text-[22px] pt-3">Dr. Syifa Mauliada</h1>
+            <p class="font-semibold text-gray text-[14px]">Dokter Kandungan</p>
+            <a href="" class="font-semibold text-white px-9 py-2 rounded-[5px] text-[16px] bg-gradient-to-r from-[#AD40FF] to-[#4E0089] mt-3">Pesan Sekarang</a>
+        </div> -->
+      </div>
+    </section>
+     <!-- List Doctor End -->
+
+     <!-- Footer Start -->
+    <footer class="flex flex-col justify-center h-auto lg:pb-26 pb-10 w-full lg:px-0 px-5">
+      <div class="flex flex-row justify-center lg:gap-26 gap-0 items-start lg:mt-20 mt-10 lg:w-auto w-full">
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-row items-center gap-5">
+            <img src="./assets/image/logo/logo.svg" class="lg:w-13 w-10 h-auto object-contain" alt="">
+            <h1 class="font-semibold lg:text-[48px] text-[40px] text-transparent bg-clip-text bg-gradient-to-br from-[#A52DFF] to-[#B065FF]">Prenatix</h1>
+          </div>
+           <p class="font-regular text-gray-secondary text-[15px] lg:w-80 w-full">Mendampingi Perjalanan Kehamilanmu Ilmu & fitur pintar, ibu siap lahir.</p>
+           <div class="flex flex-row gap-5.5">
+            <img src="./assets/image/icon/drible.png" class="w-6" alt="">
+            <img src="./assets/image/icon/github.png" class="w-6" alt="">
+            <img src="./assets/image/icon/tweeter.png" class="w-6" alt="">
+            <img src="./assets/image/icon/facebook.png" class="w-6" alt="">
+           </div>
+        </div>
+        <div class="lg:flex flex-col display-hidden-flex gap-3.5 mt-10">
+          <h1 class="font-semibold text-[20px] text-black">Company</h1>
+          <div class="flex flex-col gap-4 mt-1">
+            <p class="font-regular text-gray-secondary text-[14px]">Beranda</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Tentang Kami</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Layanan Kami</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Testimoni</p>
+          </div>
+        </div>
+        <div class="lg:flex display-hidden-flex flex-col gap-3.5 mt-10">
+          <h1 class="font-semibold text-[20px] text-black">Sosial Media</h1>
+          <div class="flex flex-col mt-1 gap-4">
+            <p class="font-regular text-gray-secondary text-[14px]">Facebook</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Twitter</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Tiktok</p>
+          </div>
+        </div>
+        <div class="lg:flex display-hidden-flex flex-col gap-3.5 mt-10">
+          <h1 class="font-semibold text-[20px] text-black">Fitur</h1>
+          <div class="flex flex-col mt-1 gap-4">
+            <p class="font-regular text-gray-secondary text-[14px]">Konsultasi AI</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Diagnosa awal</p>
+            <p class="font-regular text-gray-secondary text-[14px]">Game Edukasi</p>
+          </div>
+        </div>
+        <div class="lg:flex display-hidden-flex flex-col gap-3.5 mt-10">
+          <h1 class="font-semibold text-[20px] text-black">Kontak</h1>
+          <div class="flex flex-col gap-4 mt-1">
+            <p class="font-regular text-gray-secondary text-[14px]">Beranda</p>
+            <p class="font-regular text-gray-secondary text-[14px]">+62 812-9335-0090</p>
+            <p class="font-regular text-gray-secondary text-[14px]">prenatix@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-[1.2px] border-[#E1E1E1] mt-8 w-[90vw] mx-auto">
+      <div class="flex lg:flex-row flex-col justify-center lg:mr-28 mr-0 lg:mt-10 mt-5 gap-30">
+        <div class="flex flex-col gap-4">
+          <h2 class="font-medium text-[19px]">Get the app</h2>
+          <div class="flex flex-row lg:gap-5 gap-3">
+            <img src="./assets/image/pic/app_store.png" class="lg:w-50 w-36 h-auto object-contain" alt="">
+            <img src="./assets/image/pic/play_store.png" class="lg:w-50 w-36 h-auto object-contain" alt="">
+          </div>
+        </div>
+        <div class="lg:flex display-hidden-flex flex-row gap-8">
+          <div class="flex flex-col gap-5">
+            <h1 class="font-medium text-[19px]">Working Days</h1>
+            <p class="font-medium text-gray text-[14.5px] w-35">We’re open clinic 06 AM - 18 PM</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h1 class="font-medium text-[19px] w-98">Locations</h1>
+            <p class="font-medium text-gray text-[14.5px] w-70">Ruko Pisa Grande B no 7, Paramount Boulevard, Tangerang, Banten 15810</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Javascript -->
+    <script type="module" src="./js/consultation.js"></script>
+  </body>
+</html>
