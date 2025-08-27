@@ -20,82 +20,78 @@
     <!-- Navbar End -->
 
     <!-- Section Start -->
-     <section class="bg-[url('./assets/image/pic/game/quiz/background.png')] flex justify-center items-center w-full h-screen bg-cover">
-        <div class="container lg:w-280 flex justify-between items-center">
-            <div class="flex flex-col gap-4 pt-10 w-160">
-                <h1 class="text-[42px] font-[600] font-semibold text-white">Kuis Kehamilan</h1>
+     <section class="bg-[url('./assets/image/pic/game/quiz/background.png')] flex justify-center lg:items-center items-start w-full min-h-screen bg-cover">
+        <div class="container lg:w-280 flex lg:flex-row flex-col-reverse lg:justify-between justify-center lg:items-center items-start lg:pt-0 pt-24 lg:px-0 px-6">
+            <div class="flex flex-col gap-4 pt-10 lg:w-160 w-full">
+                <h1 class="lg:text-[42px] text-[28px] font-[600] font-semibold text-white">Kuis Kehamilan</h1>
                 <div class="flex flex-col gap-2 text-end -mt-8">
-                    <p class="font-semibold text-[16px] text-white">12.5%</p>
-                    <div class="bg-white rounded-lg w-full h-4">
-                        <div class="bg-primary rounded-lg h-full w-[80%]"></div>
+                    <p class="font-semibold text-[16px] text-white" id="progressCount">0%</p>
+                    <div class="bg-white rounded-lg w-full lg:h-4 h-3">
+                        <div class="bg-primary rounded-lg h-full w-[0%] duration-200" id="progressBar"></div>
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 mt-2">
-                    <h1 class="text-[20px] font-[600] font-semibold text-white">Pertanyaan 1:</h1>
-                    <p class="font-medium text-[16px] text-white text-justify">Saat kehamilan, makanan mana yang sebaiknya dihindari karena risiko bakteri berbahaya?</p>                    
+                    <h1 class="lg:text-[20px] text-[16px] font-[600] font-semibold text-white" id="questionIndex">Pertanyaan 1:</h1>
+                    <p class="font-medium lg:text-[16px] text-[14px] text-white text-justify" id="questionText">Saat kehamilan, makanan mana yang sebaiknya dihindari karena risiko bakteri berbahaya?</p>                    
                 </div>
                 <div class="flex flex-col gap-2 w-full">
-                    <label for="answer1" class="bg-white w-full h-14 mt-4 rounded-[12px]">
+                    <label for="answer1" class="bg-white w-full lg:h-14 h-16 mt-4 cursor-pointer rounded-[12px]">
                         <div class="flex justify-between h-full items-center">
                             <div class="h-full flex justify-center items-center gap-6">
                                 <div class="bg-[#631B99] w-[14px] h-full rounded-tl-[12px] rounded-bl-[12px]"></div>
-                                <p class="font-semibold text-[16px] text-black">Daging mentah atau setengah matang</p>
+                                <p class="font-semibold lg:text-[16px] text-[12px] text-black" id="questionAnswer1">Daging mentah atau setengah matang</p>
                             </div>
-                            <input type="radio" name="radio" class="mr-10 scale-140 accent-[#631B99]" id="answer1">
+                            <input type="radio" value="A" name="radio" class="lg:mr-10 mr-6 scale-140 accent-[#631B99]" id="answer1">
                         </div>
                     </label>
-                    <label for="answer2" class="bg-white w-full h-14 mt-4 rounded-[12px]">
+                    <label for="answer2" class="bg-white w-full lg:h-14 h-16 mt-4 cursor-pointer rounded-[12px]">
                         <div class="flex justify-between h-full items-center">
                             <div class="h-full flex justify-center items-center gap-6">
                                 <div class="bg-[#631B99] w-[14px] h-full rounded-tl-[12px] rounded-bl-[12px]"></div>
-                                <p class="font-semibold text-[16px] text-black">Daging mentah atau setengah matang</p>
+                                <p class="font-semibold lg:text-[16px] text-[12px] text-black" id="questionAnswer2">Daging mentah atau setengah matang</p>
                             </div>
-                            <input type="radio" name="radio" class="mr-10 scale-140 accent-[#631B99]" id="answer2">
+                            <input type="radio" value="B" name="radio" class="lg:mr-10 mr-6 scale-140 accent-[#631B99]" id="answer2">
                         </div>
                     </label>
-                    <label for="answer3" class="bg-white w-full h-14 mt-4 rounded-[12px]">
+                    <label for="answer3" class="bg-white w-full lg:h-14 h-16 mt-4 cursor-pointer rounded-[12px]">
                         <div class="flex justify-between h-full items-center">
                             <div class="h-full flex justify-center items-center gap-6">
                                 <div class="bg-[#631B99] w-[14px] h-full rounded-tl-[12px] rounded-bl-[12px]"></div>
-                                <p class="font-semibold text-[16px] text-black">Daging mentah atau setengah matang</p>
+                                <p class="font-semibold lg:text-[16px] text-[12px] text-black" id="questionAnswer3">Daging mentah atau setengah matang</p>
                             </div>
-                            <input type="radio" name="radio" class="mr-10 scale-140 accent-[#631B99]" id="answer3">
+                            <input type="radio" value="C" name="radio" class="lg:mr-10 mr-6 scale-140 accent-[#631B99]" id="answer3">
                         </div>
                     </label>
                 </div>
             </div>
             <div class="flex flex-col gap-6">
-                <div class="bg-[#631B99] text-white w-90 flex flex-col justify-center items-center px-6 py-8 rounded-lg">
-                    <h1 class="font-semibold text-[42px]">12.5%</h1>
-                    <p class="font-medium text-[16px]">Ibu telah menjawab 1 pertanyaan</p>
+                <div class="bg-[#631B99] text-white w-90 display-hidden-flex flex-col justify-center items-center px-6 py-8 rounded-lg">
+                    <h1 class="font-semibold text-[42px]" id="alreadyAnswerCount">0%</h1>
+                    <p class="font-medium text-[16px]" id="alreadyAnswer">Ibu telah menjawab 1 pertanyaan</p>
                 </div>
-                <div class="overflow-y-scroll h-62">
-                    <div class="flex flex-col gap-4 mt-2">
-                        <div class="bg-white w-full rounded-lg flex gap-3 px-6 py-4 items-center cursor-pointer cursor-pointer">
-                            <!-- <img src="./assets/image/pic/game/quiz/done.png" class="w-8 h-auto" alt=""> -->
-                            <p class="text-black font-semibold text-[18px]">Pertanyaan 1</p>
-                        </div>
-                        <div class="bg-white w-full rounded-lg flex gap-3 px-6 py-4 items-center cursor-pointer cursor-pointer">
-                            <!-- <img src="./assets/image/pic/game/quiz/done.png" class="w-8 h-auto" alt=""> -->
-                            <p class="text-black font-semibold text-[18px]">Pertanyaan 1</p>
-                        </div>
-                        <div class="bg-white w-full rounded-lg flex gap-3 px-6 py-4 items-center cursor-pointer cursor-pointer">
-                            <!-- <img src="./assets/image/pic/game/quiz/done.png" class="w-8 h-auto" alt=""> -->
-                            <p class="text-black font-semibold text-[18px]">Pertanyaan 1</p>
-                        </div>
-                        <div class="bg-white w-full rounded-lg flex gap-3 px-6 py-4 items-center cursor-pointer cursor-pointer">
-                            <!-- <img src="./assets/image/pic/game/quiz/done.png" class="w-8 h-auto" alt=""> -->
-                            <p class="text-black font-semibold text-[18px]">Pertanyaan 1</p>
-                        </div>
+                <div class="lg:overflow-y-scroll overflow-x-scroll lg:w-auto w-[90vw] lg:h-62 h-auto" >
+                    <div class="flex lg:flex-col flex-row gap-4 mt-2" id="totalQuestion">
+                        <!-- Javascript -->
                     </div>
                 </div>
-                <div class="flex justify-between gap-10 items-center">
-                    <button class="bg-[#01002C] w-full text-white font-semibold hover:scale-95 hover:opacity-90 duration-200 border-2 border-[#631B99] px-8 py-3 rounded-lg text-[16px] cursor-pointer">Kembali</button>
-                    <button class="bg-primary w-full text-white font-semibold  hover:scale-95 hover:opacity-90 duration-200 px-8 py-3 rounded-lg text-[16px] cursor-pointer">Selanjutnya</button>
+                <div class="display-hidden-flex justify-between gap-10 items-center">
+                    <button class="bg-[#01002C] w-full text-white font-semibold hover:scale-95 hover:opacity-90 duration-200 border-2 border-[#631B99] px-8 py-3 rounded-lg text-[16px] cursor-pointer" id="prevBtn">Kembali</button>
+                    <button class="bg-primary w-full text-white font-semibold  hover:scale-95 hover:opacity-90 duration-200 px-8 py-3 rounded-lg text-[16px] cursor-pointer" id="nextBtn">Selanjutnya</button>
                 </div>
             </div>
         </div>
      </section>
     <!-- Section End -->
+
+    <!-- Loading Start -->
+    <div class="absolute top-0 duration-200 bg-[#00000095] w-full h-screen z-[50] flex flex-col justify-center items-center" id="loadingPage">
+        <div class="bg-white rounded-lg lg:w-[400px] w-[280px] h-auto px-6 py-10 flex flex-col justify-center items-center gap-5">
+            <img src="./assets/image/logo/logo_chatbot.svg" alt="" class="lg:w-[100px] w-[60px] h-auto animate-up-down">
+            <p class="lg:text-[20px] text-[16px] font-medium" id="loadingPageText">Prenatix Memuat...</p>
+        </div>
+    </div>
+    <!-- Loading End -->
+
+    <script src="./js/question.js" type="module"></script>
 </body>
 </html>
