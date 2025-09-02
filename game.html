@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Game</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/logo.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    html {
+        overflow: hidden;
+    }
+
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+</style>
+<body>
+    <!-- Alert Start -->
+     <div class="absolute top-0 w-full h-screen bg-black z-50 flex justify-center items-center" id="rotatePage">
+        <video src="./assets/video/rotate-phone.mp4" autoplay loop muted></video>
+     </div>
+    <!-- Alert End -->
+
+    <!-- Navbar Start -->
+     <nav class="w-full lg:h-[14vh] text-black h-[11vh] flex justify-between items-center fixed lg:pl-16 pl-6 z-40" id="navHome">
+       <a href="./pilih.html" class="flex justify-center mt-10 lg:mt-0 gap-3 cursor-pointer items-center">
+           <img class="lg:w-[18px] w-[16px] h-auto" src="./assets/image/icon/back.png" alt="">
+           <h1 class="font-medium lg:text-[18px]">Kembali</h1>
+       </a>
+       <div class="bg-primary absolute top-0 right-0 text-white p-4 lg:w-50 w-30 lg:h-20 h-10 rounded-bl-xl flex flex-col justify-center items-center" id="scorePage">
+        <h1 class="font-medium lg:text-[24px] text-[12px]" id="scoreBar">Skor: 0</h1>
+       </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Game Start -->
+     <section class="w-full h-screen flex flex-col justify-center items-center bg-[#00000095] fixed z-30" id="playPage">
+        <h1 class="text-white font-semibold lg:text-[60px] text-[30px] cursor-pointer animate-pulse" id="playBtn">Mulai</h1>
+        <div class="bg-primary lg:w-[500px] w-[200px] lg:p-6 p-4 rounded-lg absolute top-6 right-6">
+            <p class="text-white font-regular text-justify lg:text-[14px] text-[10px]">Gerakkan karakter dengan tombol panah kiri (←) atau "A" dan kanan (→) atau "D" untuk menangkap makanan sehat agar mendapat poin, hindari junk food karena akan mengurangi poinmu. Kumpulkan skornya segera!</p>
+        </div>
+    </section>
+    <!-- Game End -->
+    
+    <!-- Countdown Start -->
+    <section class="w-full h-screen flex flex-col justify-center items-center bg-[#00000095] fixed z-30" id="countdownPage">
+         <h1 class="text-white font-semibold lg:text-[60px] text-[30px] cursor-pointer animate-pulse" id="countdown">5</h1>
+     </section>
+    <!-- Countdown End -->
+
+    <canvas id="canvas" width="1320" height="650"></canvas>
+
+    <!-- Analog Start -->
+     <section class="flex justify-center items-center gap-4 absolute bottom-10 left-10" id="analog">
+        <img src="./assets/image/pic/game/food/left.png" class="w-10 h-auto" alt="" id="leftBtn">
+        <img src="./assets/image/pic/game/food/right.png" class="w-10 h-auto" alt="" id="rightBtn">
+     </section>
+    <!-- Analog End -->
+
+    <!-- Result Start -->
+     <section class="min-h-screen w-full flex justify-center items-center bg-[linear-gradient(180deg,rgba(255,255,255,1)_40%,rgba(224,183,255,1)_100%)] duration-500" id="resultPage">
+        <div class="w-280 mx-auto container flex justify-center items-center flex-col lg:scale-100 scale-70">
+            <div class="flex justify-center items-center text-center flex justify-center items-center gap-14">
+                <img src="./assets/image/pic/game/quiz/result1.png" class="w-[80px] h-auto display-hidden">
+                <div class="flex flex-col justify-center items-center gap-10">
+                    <div class="flex flex-col gap-1">
+                        <h1 class="font-semibold text-[#631B99] lg:text-[44px] text-[34px]">Hindari Makanan</h1>
+                        <p class="text-[#828282] font-medium lg:text-[20px] text-[16px]">Kategori: Pemilihan Makanan</p>
+                    </div>
+                    <div class="font-medium lg:text-[18px] text-[16px] flex flex-col justify-center items-center gap-4">
+                        <p>Skor Ibu telah mencapai:</p>
+                        <h1 class="text-semibold text-[#A52DFF] text-[34px]" id="resultCount">0</h1>
+                        <p>Ibu berhasil menghindari semua makanan</p>
+                    </div>
+                </div>
+                <img src="./assets/image/pic/game/quiz/result2.png" class="w-[95px] h-auto display-hidden">
+            </div>
+            <div class="font-medium flex justify-center items-center gap-8 mt-8">
+                <button class="bg-primary text-white lg:px-12 px-8 py-3 lg:text-[18px] text-[14px] rounded-full cursor-pointer hover:scale-95 hover:opacity-95 duration-200" id="playAgainBtn">Main Lagi</button>
+                <button class="bg-white border-2 border-[#631B99] lg:px-12 px-8 py-3 lg:text-[18px] text-[14px] text-[#631B99] rounded-full cursor-pointer hover:scale-95 hover:opacity-95 duration-200" id="backBtn">Kembali</button>
+            </div>
+        </div>
+     </section>
+    <!-- Result End -->
+
+    <!-- assets -->
+    <div class="hidden">
+        <img src="./assets/image/pic/game/food/food1.png" id="food1" alt="">
+        <img src="./assets/image/pic/game/food/food2.png" id="food2" alt="">
+        <img src="./assets/image/pic/game/food/food3.png" id="food3" alt="">
+        <img src="./assets/image/pic/game/food/food4.png" id="food4" alt="">
+        <img src="./assets/image/pic/game/food/food5.png" id="food5" alt="">
+        <img src="./assets/image/pic/game/food/food6.png" id="food6" alt="">
+        <img src="./assets/image/pic/game/food/food7.png" id="food7" alt="">
+        <img src="./assets/image/pic/game/food/food8.png" id="food8" alt="">
+        <img src="./assets/image/pic/game/food/food9.png" id="food9" alt="">
+        <img src="./assets/image/pic/game/food/food10.png" id="food10" alt="">
+        <img src="./assets/image/pic/game/food/food11.png" id="food11" alt="">
+        <img src="./assets/image/pic/game/food/food12.png" id="food12" alt="">
+        <img src="./assets/image/pic/game/food/food13.png" id="food13" alt="">
+        <img src="./assets/image/pic/game/food/food14.png" id="food14" alt="">
+        <img src="./assets/image/pic/game/food/junkFood1.png" id="junkFood1" alt="">
+        <img src="./assets/image/pic/game/food/junkFood2.png" id="junkFood2" alt="">
+        <img src="./assets/image/pic/game/food/junkFood3.png" id="junkFood3" alt="">
+        <img src="./assets/image/pic/game/food/junkFood4.png" id="junkFood4" alt="">
+        <img src="./assets/image/pic/game/food/player.png" id="player" alt="">
+        <img src="./assets/image/pic/game/food/background.png" id="background" alt="">
+        <audio id="backsoundAudio">
+           <source src="./assets/audio/backsound.mp3">
+        </audio>
+        <audio id="cointAudio">
+           <source src="./assets/audio/coint.wav">
+        </audio>
+        <audio id="successAudio">
+           <source src="./assets/audio/success.wav">
+        </audio>
+        <audio id="countdownAudio">
+           <source src="./assets/audio/countdown.wav">
+        </audio>
+    </div>
+</body>
+<script src="./js/game.js"></script>
+</html>

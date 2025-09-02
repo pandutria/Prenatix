@@ -29,6 +29,31 @@ const observer = new IntersectionObserver(entries => {
 elements.forEach(el => observer.observe(el));
 // Animation Detect End
 
+// Scroll Animation Start
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.clientHeight;
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("text-primary");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("text-primary");
+    }
+  });
+});
+// Scroll Animation End
+
 // Testimoni Start
 import { testimoniData1, testimoniData2 } from "./data/testimoni.js";
 const stars = '../assets/image/pic/testimoni/stars.png';

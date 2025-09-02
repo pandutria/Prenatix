@@ -22,11 +22,11 @@
 
     <!-- Container Start -->
      <section class="w-full min-h-screen flex justify-center lg:items-center items-start lg:pt-0 pt-26 lg:pb-0 p-24 relative bg-[linear-gradient(180deg,rgba(255,255,255,1)_40%,rgba(224,183,255,1)_100%)] lg:px-0 px-6">
-        <div class="container lg:w-280 w-full flex lg:flex-row flex-col lg:pt-14 pt-0 justify-center lg:gap-20 gap-14 items-center">
+        <div class="container lg:w-280 w-full flex lg:flex-row flex-col lg:pt-14 pt-0 justify-center lg:gap-20 gap-14 items-center fade-up">
             <div class="flex flex-col justify-between items-start bg-white border-4 rounded-sm border-[#929292] lg:w-86 w-full relative group hover:border-[#7C1BC4] duration-200">
-                <div class="bg-[rgba(107,107,107,0.85)] p-6 rounded-full absolute top-28 -translate-x-1/2 left-1/2 cursor-pointer group-hover:bg-[#7C1BC4] duration-200">
+                <a href="./kuis.html" class="bg-[rgba(107,107,107,0.85)] p-6 rounded-full absolute top-28 -translate-x-1/2 left-1/2 cursor-pointer group-hover:bg-[#7C1BC4] duration-200">
                     <img class="w-10 h-auto" src="./assets/image/pic/game/play.png" alt="">
-                </div>
+                </a>
                 <img src="./assets/image/pic/game/quiz.png" class="w-full lg:h-70 h-60 object-cover" alt="">
                 <div class="flex flex-col gap-2 mt-4 px-6 pb-6">
                     <h1 class="text-[#631B99] font-semibold font-[600] lg:text-[24px] text-[20px]">Kuis Kehamilan</h1>
@@ -34,9 +34,9 @@
                 </div>
             </div>
             <div class="flex flex-col justify-between items-start bg-white border-4 rounded-sm border-[#929292] lg:w-86 w-full relative group hover:border-[#7C1BC4] duration-200">
-                <div class="bg-[rgba(107,107,107,0.85)] p-6 rounded-full absolute top-28 -translate-x-1/2 left-1/2 cursor-pointer group-hover:bg-[#7C1BC4] duration-200">
+                <a href="./game.html" class="bg-[rgba(107,107,107,0.85)] p-6 rounded-full absolute top-28 -translate-x-1/2 left-1/2 cursor-pointer group-hover:bg-[#7C1BC4] duration-200">
                     <img class="w-10 h-auto" src="./assets/image/pic/game/play.png" alt="">
-                </div>
+                </a>
                 <img src="./assets/image/pic/game/food.png" class="w-full lg:h-70 h-60 object-cover" alt="">
                 <div class="flex flex-col gap-2 mt-4 px-6 pb-6">
                     <h1 class="text-[#631B99] font-semibold font-[600] lg:text-[24px] text-[20px]">Hindari Makanan Buruk</h1>
@@ -47,4 +47,21 @@
      </section>
     <!-- Container End -->
 </body>
+<script>
+    // Animation Detect Start
+    const elements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      rootMargin: "0px 0px -100px 0px"
+    });
+
+    elements.forEach(el => observer.observe(el));
+    // Animation Detect End
+</script>
 </html>

@@ -11,25 +11,27 @@
 </head>
 <body>
     <!-- Navbar Start -->
-    <nav class="fixed w-full bg-white flex flex-row items-center lg:justify-center justify-between h-[12vh] lg:gap-100 gap-0 px-5 border-[1px] border-[#00000029] bg-white z-50">
-      <a href="./index.html" class="flex flex-row items-center gap-3">
-        <img src="./assets/image/logo/logo.svg" class="w-[23px] h-auto object-contain" alt="">
-        <p class="text-primary font-semibold text-[22px]">Prenatix</p>
-      </a>
-      <div class="flex items-center justify-center gap-8 lg:relative fixed bg-white lg:flex-row flex-col navbar-active lg:h-auto h-screen lg:w-auto w-[240px] top-0">
-        <a href="#" class="font-semibold text-primary text-[16px]">Beranda</a>
-        <a href="" class="font-regular text-black text-[16px]">Tentang Kami</a>
-        <a href="" class="font-regular text-black text-[16px]">Layanan Kami</a>
-        <a href="" class="font-regular text-black text-[16px]">Testimoni</a>
-        <button class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-3 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]">
-          <img src="./assets/image/icon/call.png" class="lg:w-[16px] w-[14px] h-auto object-contain"  alt="">
-          <p class="font-semibold text-white lg:text-[16px] text-[14px]">Hubungi Kami</p>
-        </button>
-      </div>
-      <div class="display-flex flex-col h-[20px] relative z-50 justify-between items-center" id="listBtn">
-        <div class="bg-black h-[2px] w-[24px] navbar-btn-active-top" id="listBtnTop"></div>
-        <div class="bg-black h-[2px] w-[24px] navbar-btn-active-center" id="listBtnCenter"></div>
-        <div class="bg-black h-[2px] w-[24px] navbar-btn-active-bottom" id="listBtnBottom"></div>
+    <nav class="fixed w-full h-[12vh] px-5 border-[1px] border-[#00000029] bg-white z-50">
+      <div class="lg:w-280 w-auto h-full flex flex-row items-center mx-auto justify-between">
+        <a href="/" class="flex flex-row items-center gap-3">
+          <img src="./assets/image/logo/logo.svg" class="w-[23px] h-auto object-contain" alt="">
+          <p class="text-primary font-semibold text-[22px]">Prenatix</p>
+        </a>
+        <div class="flex items-center justify-center gap-8 lg:relative fixed bg-white lg:flex-row flex-col navbar-active lg:h-auto h-screen lg:w-auto w-[240px] top-0">
+          <a href="#" class="font-regular text-black text-[16px]">Beranda</a>
+          <a href="#about" class="font-regular text-black text-[16px]">Tentang Kami</a>
+          <a href="#service" class="font-regular text-black text-[16px]">Layanan Kami</a>
+          <a href="#testimony" class="font-regular text-black text-[16px]">Testimoni</a>
+          <a href="./doctor.html" class="flex flex-row rounded-[10px] items-center lg:px-5.5 px-4 lg:py-2.5 py-3 gap-3 bg-gradient-to-r from-[#AD40FF] to-[#4E0089]">
+            <img src="./assets/image/icon/call.png" class="lg:w-[16px] w-[14px] h-auto object-contain"  alt="">
+            <p class="font-semibold text-white lg:text-[16px] text-[14px]">Hubungi Kami</p>
+          </a>
+        </div>
+        <div class="display-flex flex-col h-[20px] relative z-50 justify-between items-center" id="listBtn">
+          <div class="bg-black h-[2px] w-[24px] navbar-btn-active-top" id="listBtnTop"></div>
+          <div class="bg-black h-[2px] w-[24px] navbar-btn-active-center" id="listBtnCenter"></div>
+          <div class="bg-black h-[2px] w-[24px] navbar-btn-active-bottom" id="listBtnBottom"></div>
+        </div>
       </div>
     </nav>
     <!-- Navbar End -->

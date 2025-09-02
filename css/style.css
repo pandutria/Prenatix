@@ -40,6 +40,19 @@ html {
   background: linear-gradient(to right, #AD40FF, #4E0089);
 }
 
+/* Nav Link */
+.nav-link {
+  font-family: "Poppins-Regular";
+  color: black;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  font-family: "Poppins-Medium";
+  color: #a52dff;
+}
+
 /* Font Family */
 .font-bold {
   font-family: "Poppins-Bold";
@@ -137,6 +150,10 @@ html {
   animation: downUp 2s ease-in-out infinite alternate;
 }
 
+.animate-pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
 @keyframes upDown {
   0% {
     transform: translateY(0);
@@ -152,6 +169,18 @@ html {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 90%;
+  }
+  100% {
+    scale: 100%;
   }
 }
 
